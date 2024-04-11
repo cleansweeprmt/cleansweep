@@ -1,5 +1,6 @@
 'use client'
 
+import CtaButton from "../components/button";
 import Features from "../components/features";
 
 const Page = () => {
@@ -32,12 +33,7 @@ const Page = () => {
                     What can Evacare do for my family?
                   </p>
   
-                  <button
-                    type="button"
-                    className="text-white bg-primary hover:bg-secondary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 dark:bg-primary  focus:outline-none "
-                  >
-                    Learn More
-                  </button>
+                <CtaButton/>
                 </div>
               </div>
   

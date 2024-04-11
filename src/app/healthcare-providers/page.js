@@ -1,5 +1,5 @@
 'use client'
-import Navbar from "../components/navbar";
+import CtaButton from '../components/button'
 
 const Providers = () => {
   return (
@@ -30,13 +30,7 @@ const Providers = () => {
                 <p className="text-md text-gray-500">
                   What can Evacare do for Us?
                 </p>
-
-                <button
-                  type="button"
-                  className="text-white bg-primary hover:bg-secondary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 dark:bg-primary  focus:outline-none "
-                >
-                  Learn More
-                </button>
+                <CtaButton/>
               </div>
             </div>
 

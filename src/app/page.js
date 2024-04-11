@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Navbar from "./components/navbar";
 import Features from "./components/features";
+import CtaButton from "./components/button";
 
 export default function Home() {
   const benefits = [
@@ -47,129 +48,127 @@ export default function Home() {
     }
   };
   return (
-   <div className="">
-     <main className="min-h-screen flex-col items-center justify-between bg-secondary container mx-auto px-5 lg:px-20">
-      <section className="py-12">
-        <div className=" flex flex-col md:flex-row items-center justify-center gap-5">
-          <div className="lg:basis-1/2">
-            <h1 className="hero-title text-primary mb-5 text-start">
-              The next generation of maternal and infant healthcare
-            </h1>
-            <div className="bg-white rounded flex items-center justify-between py-2 shadow-md px-4">
+    <div className="">
+      <main className="min-h-screen flex-col items-center justify-between bg-secondary container mx-auto px-5 lg:px-20">
+        <section className="py-12">
+          <div className=" flex flex-col md:flex-row items-center justify-center gap-5">
+            <div className="lg:basis-1/2">
+              <h1 className="hero-title text-primary mb-5 text-start">
+                The next generation of maternal and infant healthcare
+              </h1>
+              <div className="bg-white rounded flex items-center justify-between py-2 shadow-md px-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+                <hr className="w-[2px] h-10 bg-gray-300"></hr>
+                <p className="text-md text-gray-500">
+                  What can Evacare do for me?
+                </p>
+                <CtaButton />
+              </div>
+            </div>
+
+            <div>
+              <img src="/img/1.jpg" className="rounded-lg"></img>
+            </div>
+          </div>
+        </section>
+        <section className="py-10" id="about">
+          <h1 className="section-title text-dark mb-5 text-center lg:max-w-[80%] mx-auto">
+            Evacare’s pioneering virtual care model is built around women and
+            families, delivering better outcomes and lower costs for everyone.
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 py-10">
+            <div className="flex flex-col items-center gap-4">
+              <img src="/icons/3.svg"></img>
+              <h2 className="text-dark text-2xl">Whole-person care</h2>
+              <p className="text-md text-dim text-center">
+                A holistic approach that offers comprehensive care for all
+                families.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <img src="/icons/2.svg"></img>
+              <h2 className="text-dark text-2xl">Technology-first approach</h2>
+              <p className="text-md text-dim text-center">
+                We use AI and data-driven insights deliver better health
+                outcomes.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <img src="/icons/1.svg"></img>
+              <h2 className="text-dark text-2xl">Lower Costs</h2>
+              <p className="text-md text-dim text-center">
+                Proactive intervention reduces the need for costly procedures.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="benefits bg-cover bg-center min-h-screen rounded-lg flex items-center justify-start">
+          <div className="bg-primary p-10 lg:basis-1/2 rounded-r-lg space-y-5">
+            <h2 className="section-title text-white">
+              {benefits[activeIndex].title}
+            </h2>
+            <p className="text-dim-gray text-lg">
+              {benefits[activeIndex].benefit}
+            </p>
+            <a
+              className="underline text-white text-md capitalize mt-5"
+              href="#"
+            >
+              Get Started
+            </a>
+            <div className="flex gap-3 text-white text-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className={`w-10 h-10 ${
+                  activeIndex === 0 ? "text-gray-400" : ""
+                }`}
+                onClick={() => handleTabChange("backward")}
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              <hr className="w-[2px] h-10 bg-gray-300"></hr>
-              <p className="text-md text-gray-500">
-                What can Evacare do for me?
-              </p>
-
-              <button
-                type="button"
-                className="text-white bg-primary hover:bg-secondary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 dark:bg-primary  focus:outline-none "
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className={`w-10 h-10 ${
+                  activeIndex === benefits.length - 1 ? "text-gray-400" : ""
+                }`}
+                onClick={() => handleTabChange("forward")}
               >
-                Learn More
-              </button>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
             </div>
           </div>
-
-          <div>
-            <img src="/img/1.jpg" className="rounded-lg"></img>
-          </div>
-        </div>
-      </section>
-      <section className="py-10" id="about">
-        <h1 className="section-title text-dark mb-5 text-center lg:max-w-[80%] mx-auto">
-          Evacare’s pioneering virtual care model is built around women and
-          families, delivering better outcomes and lower costs for everyone.
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 py-10">
-          <div className="flex flex-col items-center gap-4">
-            <img src="/icons/3.svg"></img>
-            <h2 className="text-dark text-2xl">Whole-person care</h2>
-            <p className="text-md text-dim text-center">
-              A holistic approach that offers comprehensive care for all
-              families.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-4">
-            <img src="/icons/2.svg"></img>
-            <h2 className="text-dark text-2xl">Technology-first approach</h2>
-            <p className="text-md text-dim text-center">
-              We use AI and data-driven insights deliver better health outcomes.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-4">
-            <img src="/icons/1.svg"></img>
-            <h2 className="text-dark text-2xl">Lower Costs</h2>
-            <p className="text-md text-dim text-center">
-              Proactive intervention reduces the need for costly procedures.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="benefits bg-cover bg-center min-h-screen rounded-lg flex items-center justify-start">
-        <div className="bg-primary p-10 lg:basis-1/2 rounded-r-lg space-y-5">
-          <h2 className="section-title text-white">
-            {benefits[activeIndex].title}
-          </h2>
-          <p className="text-dim-gray text-lg">
-            {benefits[activeIndex].benefit}
-          </p>
-          <a className="underline text-white text-md capitalize mt-5" href="#">
-            Get Started
-          </a>
-          <div className="flex gap-3 text-white text-2xl">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className={`w-10 h-10 ${
-                activeIndex === 0 ? "text-gray-400" : ""
-              }`}
-              onClick={() => handleTabChange("backward")}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className={`w-10 h-10 ${
-                activeIndex === benefits.length - 1 ? "text-gray-400" : ""
-              }`}
-              onClick={() => handleTabChange("forward")}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-          </div>
-        </div>
-      </section>
-      <Features/>
-    </main>
-   </div>
+        </section>
+        <Features />
+      </main>
+    </div>
   );
 }

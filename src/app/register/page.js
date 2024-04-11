@@ -166,7 +166,7 @@ const Signup = () => {
                       )}
                     </label>
 
-                    <div className="flex mt-6 text-sm">
+                    {/* <div className="flex mt-6 text-sm">
                       <label className="flex items-center dark:text-gray-400">
                         <input
                           type="checkbox"
@@ -178,7 +178,7 @@ const Signup = () => {
                           <span className="underline ml-1">privacy policy</span>
                         </span>
                       </label>
-                    </div>
+                    </div> */}
                     <button
                       type="submit"
                       className=" flex items-center justify-center gap-2 w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#01382E] border border-transparent rounded-lg active:bg-[#01382E] hover:bg-[#13A8BD] focus:outline-none focus:shadow-outline-purple"
@@ -190,12 +190,12 @@ const Signup = () => {
 
                   <hr className="my-8" />
                   <p className="mt-4">
-                    <a
+                    {/* <a
                       className="text-sm font-medium text-[#13A8BD] dark:text-[#13A8BD] hover:underline"
                       href="/login"
                     >
                       Already have an account? Login
-                    </a>
+                    </a> */}
                   </p>
                 </div>
               </div>
