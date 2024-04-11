@@ -71,7 +71,7 @@
 
 .links a.active,
 .links a:hover {
-  color: var(--blue);
+  color: #13A8BD
 }
 
 
@@ -79,6 +79,243 @@
 .menu-bar {
   padding: 5px;
 }
+.gala-hero{
+  background-image: url(../../public/img/gala-hero.png);
+}
+
+.topics-card {
+  width: 100%;
+  height: 250px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 2px solid#00856f;
+  background: transparent;
+}
+
+/* == Contact == */
+section.contact {
+  background-color: var(--transparent);
+  margin: 40px 0px 0px;
+}
+
+.contact-details,
+.contact-form {
+  padding: 10px;
+  width: 100%;
+  max-width: 584px;
+  min-width: 280px;
+}
+
+.contact-details .title {
+  padding: 0px 0px 16px;
+}
+
+.contact-details .title h1 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 10px 0px;
+}
+
+.contact-details .title p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--white);
+  margin: 10px 0px;
+}
+
+.contact-details .details {
+  padding: 16px 0px;
+}
+
+.details .detail {
+  height: 48px;
+  width: fit-content;
+  padding: 12px 24px;
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  margin: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 25px;
+}
+
+.details .detail span {
+  margin: 0px 16px 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black-level-nd);
+}
+
+.contact-details iframe {
+  margin: 30px 0px 10px;
+  width: 100%;
+  max-width: 560px;
+  min-width: 260px;
+  height: 100%;
+  max-height: 287px;
+  aspect-ratio: 560/287;
+}
+
+.contact-form form .names {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .control-group {
+  width: 100%;
+  max-width: 564px;
+  min-width: 260px;
+  padding: 10px;
+}
+
+form .control-group label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--white);
+  padding: 0px 0px 10px;
+}
+
+form .control-group input {
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #BCBCBC;
+  border-radius: 5px;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  padding: 13px 20px;
+}
+
+form .control-group input::placeholder {
+  color: gray;
+}
+
+.control-group.checkbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.control-group.checkbox label {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0px 0px 0px 10px;
+}
+
+#checkboxed {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 9px !important;
+  background-color: transparent !important;
+  border: 2px solid white !important;
+}
+
+#checkboxed:checked {
+  background-color: white;
+  /* Change background color when checked */
+}
+
+.control-group button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* == || Contact == */
+
+.about-card svg#ellipse {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.about-card span.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.about-card span.icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.about-card .card-text h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  color: white;
+}
+
+.about-card .card-text p {
+  color: white;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.about-card:nth-child(2) {
+  background-color: #F39711;
+}
+
+.about-card:nth-child(3) {
+  background-color: #06400B;
+}
+
+.about-card:nth-child(4) {
+  background-color: #13A8BD;
+}
+
+.about-card:nth-child(1) {
+  background-color: #90123F;
+}
+
+.about img.vector {
+  position: absolute;
+}
+
+.about img.vector.m-one {
+  top: 30%;
+  right: 0px;
+}
+
+.about img.vector.m-two {
+  bottom: 30%;
+  left: 0px;
+}
+
 /* == || Header == */
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
