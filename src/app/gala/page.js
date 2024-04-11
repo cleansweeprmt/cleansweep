@@ -177,12 +177,13 @@ const Page = () => {
               />
             </svg>
             <p className="text-md text-gray-500">The Tribe Hotel,Nairobi</p>
-            <button
+            <a href="https://www.eventbrite.com/e/evacare-charity-award-gala-tickets-881266841847?aff=oddtdtcreator">   <button
               type="button"
               className="text-white bg-primary hover:bg-secondary focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 dark:bg-primary  focus:outline-none "
             >
               Book Seat
-            </button>
+            </button></a>
+          
           </div>
         </div>
       </section>
