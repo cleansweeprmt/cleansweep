@@ -265,17 +265,16 @@ const Page = () => {
                   <div className="absolute inset-0 bg-[#F39711CC] opacity-0 group-hover:opacity-50 rounded-full"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <div>
-                      <h2 className="text-white text-center">JOHN KAMARA</h2>
+                      <h2 className="text-white text-center">Sharola Odipo</h2>
                       <p className="text-white text-center">
-                        Pan African Tech Entrepreneur - AI, Blockchain
-                        Specialist
+                        Founder&CEO,Evacare
                       </p>
                       <h3
                         className="text-black text-center mt-3 cursor-pointer"
                         onClick={() =>
                           openSpeakerModal({
-                            image: "/speakers/kamara.jpg",
-                            bio: 'John Kamara is a Pan-Africa smart technology thought leader, investor, and technology entrepreneur with over 20 years of experience in business growth and market expertise. As the CEO and co-founder of Adanian Labs, he has a mission to actuate the tech revolution in Africa by investing in and building tech ventures, building smart technology capacity, launching tech tools to impact multiple sectors, and helping tech companies scale across the continent.John"s expertise spans AI, blockchain, IoT, and smart technologies, and he has successfully delivered multi- million dollar global initiatives and projects both online and offline in corporate and government sectors in Europe, Asia, and Africa. He began his career in the tech and telecoms space in the mid-1990s, working for international brands such as Digicel in Jamaica, O2 Ireland, BMC Software, and Google.John is a celebrated smart technology speaker who has graced multiple African and global stages, championing for AI and Blockchain support and adoption for critical sectors like health, education, agriculture, climate change, and financial services. He is an angel investor who spends a lot of time and resources mentoring and supporting youth in tech in Africa, while building firm foundations to help them build sustainable businesses.As a passionate advocate for the adoption of AI and Blockchain technologies in Africa, John"s work has had a profound impact on the African tech ecosystem, empowering young entrepreneurs and helping to build sustainable businesses across the continent. As a leader in the Pan-African smart technology industry, his knowledge and expertise make him an invaluable asset to any organization or project in the field.',
+                            image: "/img/speakers/sharola.jpg",
+                            bio: 'Sharola is a mother of two and a passionate advocate for gender equality in the tech sector. She is the Founder and President of Women in AI Africa (WAIA), a non-profit organization dedicated to bridging the gender gap within the AI industry. Additionally, she is the Founder and Managing Partner of Akoth Odipo Law, a boutique law firm serving a diverse clientele, both local and international.',
                           })
                         }
                       >
@@ -305,7 +304,7 @@ const Page = () => {
                         className="text-black text-center mt-3 cursor-pointer"
                         onClick={() =>
                           openSpeakerModal({
-                            image: "/speakers/richard.jpg",
+                            image: "/img/speakers/sharola.jpg",
                             bio: "Professional interests: Richard Foster-Fletcher is passionate about ethical artificial intelligence, blockchain, and climate change. He is driven by the vision of a kinder, fairer, and more sustainable world and seeks to develop a digital future that works for everyone. Richard is the Executive Chair at MKAI.org, focusing on bridging the digital divide, leveraging diverse perspectives to reduce AI harms, and building agricultural resilience in the face of climate change. As a lecturer, advisor, and author, he enthusiastically discusses topics like AI ethics, AI for good, and promoting diversity in the AI community. 1.	Causes Richard cares about: Richard is deeply involved in various environmental and social initiatives. As a member of the United Nations’ Resilience Frontiers Initiative Impact Advisory Group, he advises on communication strategies to support a global transition towards permanent resilience. He is also a working group member of the IEEE Global Initiative on Ethics of Extended Reality and a Blockchain and AI Advisor for the XR Safety Initiative, focusing on promoting privacy, security, and ethics in immersive environments.2.	Personal interests: Richard has recently discovered Yoga and commits to a daily ritual. He is passionate about music, particularly electronic music and enjoys travelling to experience new cultures and different ways of life. He swears by his 20-ingredient morning smoothie! 3.	Favourite quote: ‘No future without forgiveness” Archbishop Desmond Tutu",
                           })
                         }
