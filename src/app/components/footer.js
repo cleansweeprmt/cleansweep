@@ -8,16 +8,16 @@ const Footer = () => {
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">About</a>
+                    <a href="/healthcare-providers" className="hover:underline me-4 md:me-6">Healthcare Providers</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="https://opendatacommons.org/licenses/pddl/1-0/" className="hover:underline me-4 md:me-6">Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+                    <a href="/individuals" className="hover:underline me-4 md:me-6">Individuals</a>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline">Contact</a>
+                    <a href="https://calendly.com/ochiengwarren3/evacare" className="hover:underline">Contact</a>
                 </li>
             </ul>
         </div>
