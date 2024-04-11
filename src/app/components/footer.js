@@ -17,7 +17,7 @@ const Footer = () => {
                     <a href="/individuals" className="hover:underline me-4 md:me-6">Individuals</a>
                 </li>
                 <li>
-                    <a href="https://calendly.com/ochiengwarren3/evacare" className="hover:underline">Contact</a>
+                    <a href="https://calendly.com/ochiengwarren3/evacare" className="hover:underline">Contact Us</a>
                 </li>
             </ul>
         </div>
