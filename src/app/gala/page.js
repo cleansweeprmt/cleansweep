@@ -1206,7 +1206,6 @@ const Page = () => {
             </span>
             <div class="card-text p-3">
               <h2 className="text-white">Startup Awards</h2>
-              <p>Startups</p>
               <p>Awarding a company developing game-changing solutions in maternal and infant health</p>
               <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
@@ -1300,7 +1299,7 @@ const Page = () => {
               <div class="title">
                 <h1>Register Now</h1>
                 <p>
-                  Care without barries:Advancing maternal and infant healthcare
+                  Care without barriers:Advancing maternal and infant healthcare
                 </p>
               </div>
               <div class="details">
