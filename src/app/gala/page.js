@@ -231,7 +231,7 @@ const Page = () => {
             </div>
           </div>
         </section>
-        <section>
+        {/* <section>
           <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
             <div className="flex flex-col md:flex-row gap-10 m-5">
               <img
@@ -443,7 +443,7 @@ const Page = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="flex items-center justify-center flex-wrap gap-10">
+              <div className="flex items-center justify-center flex-wrap gap-10">
                 <div className="flex flex-col md:flex-row gap-10">
                   <div className="space-y-3 flex flex-row md:flex-col items-center">
                     <div
@@ -705,10 +705,10 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <section class="about bg-primary rounded-lg" id="about-id">
           <div className="container mx-auto px-10 lg:px-28 ">
             <div class="about-cards py-4">
@@ -1187,7 +1187,7 @@ const Page = () => {
         <section className="py-12 space-y-4">
             <h1 className="section-title text-primary text-center">Gala Awards</h1>
         <div class="about-cards grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div class="about-card w-full h-[250px] rounded-2xl">
+          <div class="about-card w-full  rounded-2xl">
             <svg id="ellipse" xmlns="http://www.w3.org/2000/svg" width="131" height="93" viewBox="0 0 131 93" fill="none">
               <g opacity="0.15">
                 <circle cx="98.9996" cy="-6.00002" r="19.4" stroke="#F9FCFC" stroke-width="2.56954" />
@@ -1208,9 +1208,10 @@ const Page = () => {
               <h2 className="text-white">Startup Awards</h2>
               <p>Startups</p>
               <p>Awarding a company developing game-changing solutions in maternal and infant health</p>
+              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
-          <div class="about-card w-full h-[250px] rounded-2xl">
+          <div class="about-card w-full rounded-2xl">
             <svg id="ellipse" xmlns="http://www.w3.org/2000/svg" width="131" height="93" viewBox="0 0 131 93" fill="none">
               <g opacity="0.15">
                 <circle cx="98.9996" cy="-6.00002" r="19.4" stroke="#F9FCFC" stroke-width="2.56954" />
@@ -1232,10 +1233,10 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Non-Profits Awards</h2>
               <p>Recognizing a non-profit making a remarkable difference for mothers and infants.</p>
-              
+              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
-          <div class="about-card w-full h-[250px] rounded-2xl">
+          <div class="about-card w-full  rounded-2xl">
             <svg id="ellipse" xmlns="http://www.w3.org/2000/svg" width="131" height="93" viewBox="0 0 131 93" fill="none">
               <g opacity="0.15">
                 <circle cx="98.9996" cy="-6.00002" r="19.4" stroke="#F9FCFC" stroke-width="2.56954" />
@@ -1264,10 +1265,10 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Insurance Awards</h2>
               <p>Honoring an insurer committed to expanding access to quality maternity and infant care coverage.</p>
-              
+              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
-          <div class="about-card w-full h-[250px] rounded-2xl">
+          <div class="about-card w-full rounded-2xl">
             <svg id="ellipse" xmlns="http://www.w3.org/2000/svg" width="131" height="93" viewBox="0 0 131 93" fill="none">
               <g opacity="0.15">
                 <circle cx="98.9996" cy="-6.00002" r="19.4" stroke="#F9FCFC" stroke-width="2.56954" />
@@ -1287,6 +1288,7 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Individual Awards</h2>
               <p>Celebrating exceptional people impacting maternal and infant healthcare.</p>
+              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
               
             </div>
           </div>
@@ -1298,8 +1300,7 @@ const Page = () => {
               <div class="title">
                 <h1>Register Now</h1>
                 <p>
-                  Advancing maternal and infant healthcare: Redefining Work in a Rapidly
-                  Changing World
+                  Care without barries:Advancing maternal and infant healthcare
                 </p>
               </div>
               <div class="details">
@@ -1320,7 +1321,7 @@ const Page = () => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>+0161 216 4007</span>
+                  <span>+254  723 080340</span>
                 </div>
                 <div class="detail">
                   <svg
@@ -1428,10 +1429,10 @@ const Page = () => {
                   />
                 </div>
                 <div className="control-group">
-                  <label for="tickets">Number of Tickets</label>
+                  <label for="tickets">Message</label>
                   <br />
                   <input
-                    type="number"
+                    type="text"
                     name="tickets"
                     value={formData.tickets}
                     onChange={handleInputChange}
@@ -1440,7 +1441,7 @@ const Page = () => {
                 </div>
                 {/* Checkbox input here */}
                 <div className="control-group">
-                  <button type="submit" className="bg-primary">Book Now</button>
+                  <button type="submit" className="bg-primary">Send Enquiries</button>
                 </div>
               </form>
             </div>
