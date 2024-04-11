@@ -137,7 +137,7 @@ const Page = () => {
           Charity & Awards Gala
           </h1>
           <h3 className=" text-white text-3xl text-center z-10">
-            Advancing maternal and infant healthcare .
+            Advancing maternal and infant healthcare
           </h3>
           <div className="bg-white rounded flex items-center justify-between py-2 shadow-md px-4 gap-5 z-10">
             <svg
