@@ -9,7 +9,8 @@ const Navbar = () => {
   return (
    
       <div className=" container mx-auto px-5 lg:px-20 py-5 bg-secondary">
-        <div className='flex items-center justify-between lg:shadow-lg lg:rounded-lg lg:bg-white p-3 lg:fixed top-3 lg:w-[88%] mx-auto z-10'> 
+       
+        <div className='flex items-center justify-between lg:shadow-lg lg:rounded-lg lg:bg-white p-3 fixed top-10 lg:top-8 w-[88%] mx-auto z-10'> 
         <div className="logo"> 
           <a href="/" className="nav-logo">
             <Image src="/logo-dark.png" alt="logo" width={100} height={100} />
