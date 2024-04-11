@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <div>
           <div className='container-fluid z-20 fixed top-0 w-full'>
-          <p className='py-1 px-4 text-white bg-primary text-xs lg:text-sm  text-center z-20'>Charity Gala On on 5/25/2024 |Adavancing maternal and infant healthcare |  <a className='text-[#F39711]' href='https://www.eventbrite.com/e/evacare-charity-award-gala-tickets-881266841847?aff=oddtdtcreator'>Register now →</a></p>
+          <p className='py-1 px-4 text-white bg-primary text-xs lg:text-sm  text-center z-20'>Charity Gala On 5/25/2024 | Advancing maternal and infant healthcare |  <a className='text-[#F39711]' href='https://www.eventbrite.com/e/evacare-charity-award-gala-tickets-881266841847?aff=oddtdtcreator'>Register now →</a></p>
           </div>
         
         <Navbar/>

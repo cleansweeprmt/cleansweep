@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
 
           <a href="/#about">Why Evacare</a>
-          <a href="/healthcare-providers">For Healtcare Providers</a>
+          <a href="/healthcare-providers">For Healthcare Providers</a>
           <a href="/individuals">For Individuals</a>
           <a href="/gala">Charity Gala</a>
           
