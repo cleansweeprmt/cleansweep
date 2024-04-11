@@ -134,7 +134,7 @@ const Page = () => {
         <div className="h-full w-full bg-black absolute left-0 top-0 opacity-[0.5]"></div>
         <div className="flex flex-col items-center justify-start gap-5">
           <h1 className="hero-title text-white mb-5 text-center">
-            Charity Gala
+          Charity & Awards Gala
           </h1>
           <h3 className=" text-white text-3xl text-center z-10">
             Advancing maternal and infant healthcare .
@@ -979,7 +979,7 @@ const Page = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <h2 className="text-white font-semibold text-xl">Evacare launch</h2>
+                  <h2 className="text-white font-semibold text-xl capitalize">Evacare launch</h2>
                   <p className="text-white text-md">
                     A presentation on the PDI Model and its impact on data
                     transformation and AI adoption.
@@ -1063,7 +1063,7 @@ const Page = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <h2 className="text-white font-semibold text-xl">Heartfelt testimonials</h2>
+                  <h2 className="text-white font-semibold text-xl capitalize">Heartfelt testimonials</h2>
                   <p className="text-white text-md">
                   Be captivated by personal testimonials from mothers who have benefited from quality care.
                   </p>
@@ -1231,7 +1231,7 @@ const Page = () => {
               </svg>
             </span>
             <div class="card-text p-5">
-              <h2>Non-Profits Awards</h2>
+              <h2>Non-Profit Awards</h2>
               <p>Recognizing a non-profit making a remarkable difference for mothers and infants.</p>
               <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
