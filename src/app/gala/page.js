@@ -2,45 +2,45 @@
 
 import { useState } from "react";
 
-export const Modal = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;
+//  const Modal = ({ isOpen, onClose, children }) => {
+//   if (!isOpen) return null;
 
-  const overlayStyle = {
-    position: "fixed",
-    top: "45%",
-    left: "50%",
-    width: "100%",
-    height: "500px",
-    transform: "translate(-50%, -50%)",
-    background: "rgba(0, 0, 0, 0.7)",
-    padding: "2rem",
-    zIndex: 20,
-  };
+//   const overlayStyle = {
+//     position: "fixed",
+//     top: "45%",
+//     left: "50%",
+//     width: "100%",
+//     height: "500px",
+//     transform: "translate(-50%, -50%)",
+//     background: "rgba(0, 0, 0, 0.7)",
+//     padding: "2rem",
+//     zIndex: 20,
+//   };
 
-  const modalStyle = {
-    position: "fixed",
-    top: 0,
-    left: "0px",
-    width: "100%",
-    height: "100vh",
-    background: "#ffffff",
-    zIndex: 1,
-  };
+//   const modalStyle = {
+//     position: "fixed",
+//     top: 0,
+//     left: "0px",
+//     width: "100%",
+//     height: "100vh",
+//     background: "#ffffff",
+//     zIndex: 1,
+//   };
 
-  return (
-    <div style={overlayStyle}>
-      <div style={modalStyle}>
-        <button
-          onClick={onClose}
-          className="py-2 px-10 rounded mt-4 text-white bg-[#F7941D]"
-        >
-          Close Profile
-        </button>
-        {children}
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div style={overlayStyle}>
+//       <div style={modalStyle}>
+//         <button
+//           onClick={onClose}
+//           className="py-2 px-10 rounded mt-4 text-white bg-[#F7941D]"
+//         >
+//           Close Profile
+//         </button>
+//         {children}
+//       </div>
+//     </div>
+//   );
+// };
 const Page = () => {
   // const [isOpen, setOpen] = useState(false);
   // const [isModalOpen, setModalOpen] = useState(false);
