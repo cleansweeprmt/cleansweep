@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Navbar from "./components/navbar";
 import Features from "./components/features";
 import CtaButton from "./components/button";
 
