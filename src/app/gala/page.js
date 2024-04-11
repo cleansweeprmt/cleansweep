@@ -42,8 +42,8 @@ export const Modal = ({ isOpen, onClose, children }) => {
   );
 };
 const Page = () => {
-  const [isOpen, setOpen] = useState(false);
-  const [isModalOpen, setModalOpen] = useState(false);
+  // const [isOpen, setOpen] = useState(false);
+  // const [isModalOpen, setModalOpen] = useState(false);
   const topics = [
     {
       title: "Expanding Access to Care in Underserved Communities.",
@@ -76,10 +76,10 @@ const Page = () => {
         "Exploring the crucial role fathers play in supporting the well-being of both mother and child.",
     },
   ];
-  const [speakerDetails, setSpeakerDetails] = useState(null);
-  const openSpeakerModal = (speaker) => {
-    setModalOpen(true), setSpeakerDetails(speaker);
-  };
+  // const [speakerDetails, setSpeakerDetails] = useState(null);
+  // const openSpeakerModal = (speaker) => {
+  //   setModalOpen(true), setSpeakerDetails(speaker);
+  // };
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
