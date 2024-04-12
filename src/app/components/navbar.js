@@ -44,11 +44,11 @@ const Navbar = () => {
             onClick={() => {
               router.push('https://calendly.com/ochiengwarren3/evacare')
             }}
-            className="uppercase  justify-center px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple mb-2 lg:mb-0"
+            className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
           >
             SPEAK TO OUR TEAM
           </button>
-          <button className="px-4 py-2 text-sm font-medium leading-5 text-center text-[#01382E] transition-colors duration-150 border-[#01382E]  border-solid border-2 rounded-lg active:bg-[#01382E] hover:bg-[#01382E] hover:text-white focus:outline-none focus:shadow-outline-purple ml-14 lg:ml-3"  onClick={() => {
+          <button className="px-4 py-2 text-sm font-medium  text-center text-[#01382E] transition-colors duration-150 border-[#01382E]  border-solid border-2 rounded-lg active:bg-[#01382E] hover:bg-[#01382E] hover:text-white focus:outline-none focus:shadow-outline-purple lg:ml-3"  onClick={() => {
               router.push('register')
             }}>
             TRY EVA FOR FREE

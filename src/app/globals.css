@@ -326,20 +326,22 @@ form .control-group input::placeholder {
   }
 
   .links {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     position: fixed;
     top: 0;
     right: -100%;
 
-    display: block;
-    padding: 80px 0px 0px;
-    text-align: centers;
+    display: flex;
+    padding: 80px 0px 10px;
     transition: all ease 0.5s;
 
     z-index: 5;
     background-color: white;
-    overflow: auto;
+
+  }
+  .links button {
+    width: 80%;
   }
 
   .links a {
@@ -347,9 +349,8 @@ form .control-group input::placeholder {
     align-items: center;
     justify-content: flex-start;
     width: 100% !important;
-    height: 50px;
     color: #005c4d;
-    padding: 0px 50px 0px;
+    padding: 0px 20px 0px;
   }
 
   .links a:hover {
