@@ -1207,7 +1207,7 @@ const Page = () => {
             <div class="card-text p-3">
               <h2 className="text-white">Startup Awards</h2>
               <p>Awarding a company developing game-changing solutions in maternal and infant health</p>
-              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
+              <a href="https://docs.google.com/forms/d/1iOtectonOl87vmYK-GKe-l3Y8rJ7E9h_CKJnUjpUrtE/edit" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
           <div class="about-card w-full rounded-2xl">
@@ -1232,7 +1232,7 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Non-Profit Awards</h2>
               <p>Recognizing a non-profit making a remarkable difference for mothers and infants.</p>
-              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
+              <a href="https://docs.google.com/forms/d/1iOtectonOl87vmYK-GKe-l3Y8rJ7E9h_CKJnUjpUrtE/edit" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
           <div class="about-card w-full  rounded-2xl">
@@ -1264,7 +1264,7 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Insurance Awards</h2>
               <p>Honoring an insurer committed to expanding access to quality maternity and infant care coverage.</p>
-              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
+              <a href="https://docs.google.com/forms/d/1iOtectonOl87vmYK-GKe-l3Y8rJ7E9h_CKJnUjpUrtE/edit" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
           <div class="about-card w-full rounded-2xl">
@@ -1287,7 +1287,7 @@ const Page = () => {
             <div class="card-text p-5">
               <h2>Individual Awards</h2>
               <p>Celebrating exceptional people impacting maternal and infant healthcare.</p>
-              <a href="#" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
+              <a href="https://docs.google.com/forms/d/1iOtectonOl87vmYK-GKe-l3Y8rJ7E9h_CKJnUjpUrtE/edit" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
               
             </div>
           </div>
