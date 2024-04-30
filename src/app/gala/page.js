@@ -189,27 +189,23 @@ const Page = () => {
       </section>
       <main className=" min-h-screen flex-col items-center justify-between bg-secondary container mx-auto px-5 lg:px-20">
         <section class="py-10" id="about-id">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
-            <div class="lg:h-[500px]">
-                <img src="/img/g-3.jpg" alt="evacare" className="rounded-lg w-full h-full object-cover" />
-            </div>
+          <div class="grid grid-cols-1 gap-5 lg:gap-10">
+            
             <div class=" right space-y-3">
-              <h3 className="text-primary ">Overview</h3>
-              <h1 className="text-4xl text-dark font-bold">ABOUT THE EVENT</h1>
-              <p className="text-dim text-lg">
-                The well-being of mothers and infants is a cornerstone of a
-                healthy society. Yet, access to quality maternal and infant
-                healthcare remains a challenge for many. That's why we're
-                hosting the Advancing Maternal and Infant Healthcare Gala, a
-                pivotal event dedicated to raising critical funds and fostering
-                a brighter future for mothers and babies.<br></br> <br></br> This inspiring evening
-                will bring together passionate individuals like you who
+              <h3 className="text-primary text-center">Overview</h3>
+              <h1 className="text-4xl text-dark font-bold text-center">ABOUT THE EVENT</h1>
+              <p className="text-dim text-lg text-center">
+                The well-being of mothers and infants is a cornerstone of a healthy society. Yet, access to quality maternal and infant healthcare remains a challenge for many. That's why we're hosting the Advancing Maternal and Infant Healthcare Galato to raise funds to support over 2,000 women from across access to quality healthcare<br></br><br></br>This inspiring evening
+                will bring together passionate individuals and organziations who
                 understand the profound impact of accessible maternal and infant
                 healthcare. Through your participation, we aim to bridge the gap
                 and ensure every mother and child receives the essential care
                 they need.
               </p>
               
+            </div>
+            <div class="lg:h-[520px]">
+                <img src="/img/ticket.jpg" alt="evacare" className="rounded-lg w-full h-full object-cover" />
             </div>
           </div>
         </section>
