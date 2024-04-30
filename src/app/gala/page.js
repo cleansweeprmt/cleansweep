@@ -1205,8 +1205,8 @@ const Page = () => {
               </svg>
             </span>
             <div class="card-text p-3">
-              <h2 className="text-white">Startup Awards</h2>
-              <p>Awarding a company developing game-changing solutions in maternal and infant health</p>
+              <h2 className="text-white">Healthcare Provider Award</h2>
+              <p>Awarding a helthcare providers developing game-changing solutions in maternal and infant health</p>
               <a href="https://docs.google.com/forms/d/1iOtectonOl87vmYK-GKe-l3Y8rJ7E9h_CKJnUjpUrtE/edit" className=" underline text-sm text-white cursor-pointer">Apply Now</a>
             </div>
           </div>
