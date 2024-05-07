@@ -76,10 +76,6 @@ const Page = () => {
         "Exploring the crucial role fathers play in supporting the well-being of both mother and child.",
     },
   ];
-  // const [speakerDetails, setSpeakerDetails] = useState(null);
-  // const openSpeakerModal = (speaker) => {
-  //   setModalOpen(true), setSpeakerDetails(speaker);
-  // };
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
