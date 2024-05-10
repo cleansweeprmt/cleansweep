@@ -97,21 +97,22 @@ const Providers = () => {
               <div className="space-y-3">
                 <hr className="h-[2px] w-full bg-black"></hr>
                 <h2 className="text-3xl text-dark">
+                Digital health screening
+                </h2>
+                <p className="text-md text-dim mx-auto">
+                Time or event-based delivery of both standardized (PHQ-9, EPDS) and customizable digital health assessments.
+                </p>
+              </div>
+              <div className="space-y-3">
+                <hr className="h-[2px] w-full bg-black"></hr>
+                <h2 className="text-3xl text-dark">
                 Improved Patient Outcomes
                 </h2>
                 <p className="text-md text-dim mx-auto">
                 Eva empowers mothers with evidence-based information and resources, leading to better informed decisions and potentially fewer complications.
                 </p>
               </div>
-              <div className="space-y-3">
-                <hr className="h-[2px] w-full bg-black"></hr>
-                <h2 className="text-3xl text-dark">
-                Increased Patient Satisfaction
-                </h2>
-                <p className="text-md text-dim mx-auto">
-                Eva's constant support fosters trust and reduces anxieties, leading to a more positive patient experience.
-                </p>
-              </div>
+
               <div className="space-y-3">
                 <hr className="h-[2px] w-full bg-black"></hr>
                 <h2 className="text-3xl text-dark">

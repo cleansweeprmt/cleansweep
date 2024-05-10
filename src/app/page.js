@@ -50,10 +50,11 @@ export default function Home() {
     <div className="">
       <main className="min-h-screen flex-col items-center justify-between bg-secondary container mx-auto px-5 lg:px-20">
         <section className="py-12">
-          <div className=" flex flex-col md:flex-row items-center justify-center gap-5">
+          <div className=" flex flex-col md:flex-row items-center justify-center gap-5 lg:py-10">
             <div className="lg:basis-1/2">
               <h1 className="hero-title text-primary mb-5 text-start">
-                The next generation of maternal and infant healthcare
+                The next generation of connected care for the Women that need it
+                most.
               </h1>
               <div className="bg-white rounded flex items-center justify-between py-2 shadow-md px-4">
                 <svg
