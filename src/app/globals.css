@@ -316,6 +316,22 @@ form .control-group input::placeholder {
   left: 0px;
 }
 
+.hr-services {
+  height: 57px;
+  width: 0px;
+  border: solid 1px #005c4d;
+  left: 50%;
+  background: #06400B;
+}
+.service-card {
+  background: #DCE9E2;
+  border-radius: 0px 30px 30px 0px;
+}
+
+.service-card:hover {
+  background: #222222;
+  border-radius: 0px 30px 30px 0px;
+  color: white;}
 /* == || Header == */
 /* == RESPONSIVE == */
 /* Medium devices (landscape tablets, 768px and up) */
@@ -380,7 +396,36 @@ form .control-group input::placeholder {
     top: 40px;
     right: 20px;
   }
+  
+  .hr-services {
+    width: 35px;
+    height: 0px;
+    border: 1px solid #ffffff;
+    transform: rotate(90deg);
+    background: #ffffff;
+  }
+  
+.hero-title {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 1;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47px;
 }
+.section-title {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 1;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .menu-btn {
@@ -396,3 +441,4 @@ form .control-group input::placeholder {
     display: none;
   }
 }
+
