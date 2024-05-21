@@ -1,29 +1,10 @@
 "use client";
-import { useState } from "react";
 import ClientSlider from './(components)/clientSlider'
 import ServiceSlider from './(components)/servicesSlider'
 import Testimonials from './(components)/testimonials'
 
 export default function Home() {
-  const benefits = [
-    {
-      img: "Planning for pregnancy",
-      benefit:
-        "Eva is your key to a successful conception journey, offering fertility insights, personalized nutrition, and a clear roadmap for family planning.",
 
-    },
-   
-  ];
-  const [activeIndex, setActiveIndex] = useState(0);
-  const handleTabChange = (direction) => {
-    if (direction === "forward") {
-      setActiveIndex((prevIndex) =>
-        Math.min(prevIndex + 1, benefits.length - 1)
-      );
-    } else if (direction === "backward") {
-      setActiveIndex((prevIndex) => Math.max(prevIndex - 1, 0));
-    }
-  };
   return (
     <div className="bg-white">
       <main className="min-h-screen flex-col items-center justify-between bg-white">
@@ -46,7 +27,7 @@ export default function Home() {
           Our Services
           </h1>
           <p className="text-dim text-md"> HRFLLEK is your one-stop place
-for HR Services</p>
+for Human resource Services</p>
             </div>
             <a
            href="/services"
