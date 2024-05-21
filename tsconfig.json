@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/(services)/auth.js", "src/app/(services)/firebase.js", "src/app/components/buttonLoader.js"  ],
+, "src/app/(services)/auth.ts", "src/app/(services)/firebase.ts", "src/app/(components)/buttonLoader.js"  ],
   "exclude": [
     "node_modules"
   ]

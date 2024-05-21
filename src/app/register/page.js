@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useRouter } from 'next/navigation'
-import Loader from '../components/buttonLoader'
+import Loader from '../(components)/buttonLoader'
 import { createNewUser } from '../(services)/firestore'
 import { createUser } from '../(services)/auth'
 
@@ -79,7 +79,7 @@ const Signup = () => {
         data: formData
       }
       await createNewUser(payload, () => {
-       router.push('/')
+       router.push('/chat')
       })
       setLoading(false)
       toast.success('🦄 Account Request Sent Successfully!', {

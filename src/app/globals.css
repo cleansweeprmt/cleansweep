@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .bg-primary {
-  background-color: #00856f;
+  background-color: #0C9494;
 }
 .bg-secondary {
   background-color: #f1f7f6;
 }
 .text-primary {
-  color: #00856f;
+  color: #0C9494;
 }
 .text-secondary {
   color: #64726f;
@@ -63,7 +63,7 @@
 .links a {
   font-size: 14px;
   font-weight: 500;
-  color: #005c4d;
+  color: #0C9494;
   padding: 13px 10px;
   white-space: nowrap;
 }
@@ -71,7 +71,7 @@
 
 .links a.active,
 .links a:hover {
-  color: #13A8BD
+  color: #000000;
 }
 
 

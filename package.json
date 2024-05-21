@@ -1,5 +1,5 @@
 {
-  "name": "evacare",
+  "name": "hrfleek",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,9 +11,11 @@
   "dependencies": {
     "firebase": "^10.10.0",
     "next": "14.1.4",
+    "openai": "^4.47.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/node": "20.12.7",

@@ -1,7 +1,7 @@
 import { Roboto } from 'next/font/google';
 import "./globals.css";
-import Navbar from './components/navbar';
-import Footer from './components/footer';
+import Navbar from './(components)/navbar';
+import Footer from './(components)/footer';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -9,19 +9,15 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "Evacare",
-  description: "The next generation of maternal and infant healthcare",
+  title: "HRFLEEK",
+  description: "Your Human resource solutions Partner",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <div>
-          <div className='container-fluid z-20 fixed top-0 w-full'>
-          <p className='py-1 px-4 text-white bg-primary text-xs lg:text-sm  text-center z-20'>Charity Gala On 5/25/2024 | Advancing maternal and infant healthcare |  <a className='text-[#F39711]' href='https://mypricepilot.com'>Register now →</a></p>
-          </div>
-        
+        <div> 
         <Navbar/>
         {children}
         <Footer/>

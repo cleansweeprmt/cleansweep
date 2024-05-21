@@ -1,5 +1,5 @@
 'use client'
-import CtaButton from '../components/button'
+import CtaButton from '../(components)/button'
 
 const Providers = () => {
   return (

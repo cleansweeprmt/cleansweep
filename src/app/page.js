@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Features from "./components/features";
-import CtaButton from "./components/button";
+import Features from "./(components)/features";
+import CtaButton from "./(components)/button";
 
 export default function Home() {
   const benefits = [
