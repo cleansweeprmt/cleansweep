@@ -53,6 +53,7 @@ for Human resource Services</p>
           
         </section>
         <section className="container mx-auto px-5 lg:px-20 py-10 gap-10">
+          <h2 className='text-center text-primary font-bold text-2xl'>TESTIMONIALS</h2>
           <Testimonials/>
         </section>
       </main>
