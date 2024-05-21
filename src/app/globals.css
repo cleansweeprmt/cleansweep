@@ -24,6 +24,9 @@
   color: rgba(255, 255, 255, .8);
   margin-bottom: 20px;
 }
+.border-primary{
+  border-color:#0C9494 ;
+}
 
 .hero-title {
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -78,6 +81,9 @@
 
 .menu-bar {
   padding: 5px;
+}
+.hero{
+  background-image: url(../../public/img/hero.jpg);
 }
 .gala-hero{
   background-image: url(../../public/img/gala-hero.png);
