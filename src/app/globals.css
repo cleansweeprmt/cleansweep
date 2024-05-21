@@ -99,6 +99,38 @@
   background: transparent;
 }
 
+.marquee-hero {
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-75% + var(--offset));
+}
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 15s linear infinite;
+  animation-play-state: running;
+}
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+.slick-dots li button:before {
+  font-size: 12px;
+  color: gray;
+}
+.slick-dots li.slick-active button:before {
+  color: black;
+}
+
 /* == Contact == */
 section.contact {
   background-color: var(--transparent);

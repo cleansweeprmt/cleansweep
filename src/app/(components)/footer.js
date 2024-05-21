@@ -1,28 +1,26 @@
 const Footer = () => {
     return ( 
-        <footer className="bg-primary rounded-lg shadow">
+        <footer className="bg-gray-800 rounded-top-lg shadow">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src="/logo.png" className="h-20" alt="Flowbite Logo" />
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-primary sm:mb-0">
+               
                 <li>
-                    <a href="/healthcare-providers" className="hover:underline me-4 md:me-6">Healthcare Providers</a>
+                    <a href="/" className="hover:underline me-4 md:me-6">Privacy Policy</a>
                 </li>
                 <li>
-                    <a href="https://opendatacommons.org/licenses/pddl/1-0/" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <a href="/policy" className="hover:underline me-4 md:me-6">Refund Policy</a>
                 </li>
                 <li>
-                    <a href="/individuals" className="hover:underline me-4 md:me-6">Individuals</a>
-                </li>
-                <li>
-                    <a href="https://calendly.com/ochiengwarren3/evacare" className="hover:underline">Contact Us</a>
+                    <a href="/contaact" className="hover:underline">Contact Us</a>
                 </li>
             </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-white text-center">© 2023 <a href="#" className="hover:underline">Evacare</a>. All Rights Reserved.</span>
+        <span className="block text-sm text-primary text-center">© 2023 <a href="#" className="hover:underline">HRFLEEK</a>. All Rights Reserved.</span>
     </div>
 </footer>
      );
