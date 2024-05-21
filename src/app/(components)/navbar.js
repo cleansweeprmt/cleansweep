@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="container-fluid bg-secondary fixed w-full z-20">
-      <div className="bg-primary text-white text-xs hidden lg:flex items-center px-3 py-2 justify-between z-10">
+      <div className=" container mx-auto lg:px-20 bg-primary text-white text-xs hidden lg:flex items-center px-3 py-2 justify-between z-10">
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
             <svg
@@ -97,7 +97,7 @@ const Navbar = () => {
 
         </div>
       </div>
-      <div className="flex items-center justify-between lg:shadow-lg lg:rounded-b-lg lg:bg-white p-3   z-10 lg:w-full">
+      <div className="container mx-auto px-5 lg:px-20 flex items-center justify-between lg:shadow-lg lg:rounded-b-lg lg:bg-white p-3   z-10 lg:w-full">
         <div className="logo">
           <a href="/" className="nav-logo">
             <Image src="/logo.png" alt="logo" width={100} height={100} />
