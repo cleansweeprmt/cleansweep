@@ -15,15 +15,20 @@ const ServiceSlider = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-  const cards = [
-    { id: 1, content: "Card 1" },
-    { id: 2, content: "Card 2" },
-    { id: 3, content: "Card 3" },
-    { id: 4, content: "Card 4" },
-    { id: 5, content: "Card 5" },
-  ];
+  const settingsMobile = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
   return (
     <div className="py-10">
+      <div className="hidden lg:block">
       <Slider {...settings}>
         {services.map((card, index) => (
           <div key={card.id} className="p-4">
@@ -39,6 +44,25 @@ const ServiceSlider = () => {
           </div>
         ))}
       </Slider>
+      </div>
+      <div className="block lg:hidden">
+      <Slider {...settingsMobile}>
+        {services.map((card, index) => (
+          <div key={card.id} className="p-4">
+            <div
+              className="bg-white p-6 rounded shadow h-[348px] bg-cover bg-top relative"
+              style={{ backgroundImage: `url(${card.img})` }}
+            >
+              <div></div>
+              <h1 className=" font-extrabold text-white text-2xl absolute bottom-8">
+                {card.title}
+              </h1>
+            </div>
+          </div>
+        ))}
+      </Slider>
+      </div>
+     
     </div>
   );
 };
