@@ -148,6 +148,15 @@ const Navbar = () => {
           >
             BOOK A CONSULTATION
           </button>
+          
+          <button
+            onClick={() => {
+              router.push("/consultation");
+            }}
+            className="uppercase ml-3 px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
+          >
+            DOWNLOAD BROCHURE
+          </button>
         </div>
         <div className="menu-bar">
           <span
