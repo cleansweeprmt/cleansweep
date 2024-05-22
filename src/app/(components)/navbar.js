@@ -142,7 +142,7 @@ const Navbar = () => {
 
           <button
             onClick={() => {
-              router.push("https://calendly.com/ochiengwarren3/evacare");
+              router.push("/consultation");
             }}
             className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
           >
