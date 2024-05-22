@@ -46,19 +46,6 @@
   font-weight: 400;
   line-height: 48px;
 }
-.benefits{
-  background-image: url(../../public/img/2.jpg);
-  
-}
-.benefits .section-title {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  opacity: 1;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 48px;
-}
 
 /* == HEADER == */
 
@@ -84,6 +71,9 @@
 }
 .hero{
   background-image: url(../../public/img/hero.jpg);
+}
+.header-bg{
+  background-image: url(../../public/hrfleek.jpg);
 }
 .gala-hero{
   background-image: url(../../public/img/gala-hero.png);
