@@ -132,7 +132,7 @@ const Navbar = () => {
             </span>
           </div>
 
-          <a href="/#about">About Us</a>
+          <a href="/about">About Us</a>
           <a href="/services">Services</a>
           <a href="/resources">Resources</a>
           <a href="/services">Clients</a>
