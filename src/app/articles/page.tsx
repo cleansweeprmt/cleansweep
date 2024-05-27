@@ -1,15 +1,18 @@
 // pages/index.js
 import Image from 'next/image'
 import Link from 'next/link'
+import PageHeader from '../(components)/header'
 
 export default function Home() {
   return (
-    <div className="font-sans">
+    <div>
+      <PageHeader title={'Articles'}/>
       {/* Other components or content can be here */}
 
+
       {/* Resource Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-4xl font-bold text-center mb-8">View Our <span className="text-teal-600">Articles</span></h2>
+      <div className="container mx-auto px-5 lg:px-20 py-10">
+        <h2 className="text-4xl font-bold text-center">View Our <span className="text-teal-600">Articles</span></h2>
         <div className="grid gap-8 py-16 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1 */}
           <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -67,7 +70,7 @@ export default function Home() {
         </div>
 
         <div className="text-center mt-8">
-          <a href="#" className="bg-teal-600 text-white py-8 px-8 rounded hover:bg-teal-700 transition">VIEW ALL RESOURCES</a>
+          <a href="#" className="bg-teal-600 text-white py-3 px-8 rounded-lg hover:bg-teal-700 transition">VIEW ALL RESOURCES</a>
         </div>
       </div>
 
