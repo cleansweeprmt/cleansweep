@@ -15,7 +15,7 @@ const Page = () => {
         console.log(service);
     },[])
     return (   <div>
-     <PageHeader title={'service'}/>
+     <PageHeader title={service.title}/>
         <div className="font-sans max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8  container">
             <div className="flex flex-col lg:flex-row">
                 <div className="bg-white p-4 lg:w-1/4">
