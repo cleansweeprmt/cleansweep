@@ -1,58 +1,32 @@
 
+'use client'
 import Image from 'next/image'
 import PageHeader from '../../(components)/header';
+import { services } from '../../(services)/data';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 const Page = () => {
+    const {id}=useParams()
+    const [service, setService] = useState(null);
+    useEffect(() => {
+        console.log(decodeURIComponent(id));
+        const service=services.find((service)=>service.title==decodeURIComponent(id))
+        setService(service)
+        console.log(service);
+    },[])
     return (   <div>
      <PageHeader title={'service'}/>
         <div className="font-sans max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8  container">
             <div className="flex flex-col lg:flex-row">
                 <div className="bg-white p-4 lg:w-1/4">
+
                     <ul className="bg-teal-700 p-4  text-white rounded-md overflow">
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Performance Management <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
+                        {services.map((service,index)=>(  <li className="mb-2 py-2" key={index}>
+                            <a href={`/services/${service.title}`} className="flex items-center gap-2">
+                              {service.title}   <span className="ml-auto min-w-[40px] h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
                             </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Job Evaluation & Grading <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Employee Background Checks <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Salary & Benefits Survey <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Job Analysis <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Immigration Services <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Outsourced HR Manager <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                Recruitment Services <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
-                        <li className="mb-2 py-2">
-                            <a href="#" className="flex items-center">
-                                HR Policies & Employment Contracts <span className="ml-auto h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
-                            </a>
-                        </li>
+                        </li>))}
+     
                     </ul>
                 </div>
 
@@ -60,10 +34,10 @@ const Page = () => {
                 <div className="p-8 pt-4 lg:w-3/4">
                     <div>
                         <div className="mb-6 rounded-md overflow-hidden">
-                            <img src="/wansom/law-audits.jpg" alt="Placeholder Image" className="mx-auto" />
+                            <img src={service?.img} alt="Placeholder Image" className="mx-auto" />
                         </div>
                     </div>
-                    <h2 className="text-2xl mt-16 font-bold mb-4 text-teal-700">Performance Management services?</h2>
+                    <h2 className="text-2xl mt-16 font-bold mb-4 text-teal-700">{service?.title}</h2>
                     <p className="mb-4">
                         We will help your business achieve its goals and objectives with our proficiency in performance management and our professional approach to client service.
                     </p>
