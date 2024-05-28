@@ -39,7 +39,7 @@ const Page = () => {
   }, []);
 
     return (  <div className="bg-white">
-        <PageHeader title={'Performance Management'}/>
+        <PageHeader title={post?.title.rendered}/>
         {loading&&(
           <div className='w-full flex items-center justify-center py-10'>
             <div className=" flex justify-center items-center">
@@ -69,11 +69,12 @@ const Page = () => {
                   <div className='lg:basis-1/4'>
                 {
                     posts.map((post,index)=>(
-                        <a className='border-b-solid border-b-2 border-b-gray-100 py-4 bg-gray-50 shadow-lg p-2' key={index} href={`/articles/${post.slug}`}>
+                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-gray-50 shadow-lg p-4'>
+                        <a className='' key={index} href={`/articles/${post.slug}`}>
                             <h1 className="text-md font-semibold" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
                         <p className="text-base mb-2 text-dim tex-sm">{new Date(post?.date).toDateString()}
                            </p>
-                            </a>
+                            </a></div>
                     ))
                 }
             </div></div>)}
