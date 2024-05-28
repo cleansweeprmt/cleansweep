@@ -20,7 +20,7 @@ const Footer = () => {
             </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-primary text-center">© 2023 <a href="#" className="hover:underline">HRFLEEK</a>. All Rights Reserved.</span>
+        <span className="block text-sm text-primary text-center">© {new Date().getFullYear()} <a href="#" className="hover:underline">HRFLEEK</a>. All Rights Reserved.</span>
     </div>
 </footer>
      );
