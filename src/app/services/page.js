@@ -9,6 +9,7 @@ const Page = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3">
         {services.map((card, index) => (
           <div key={index} className="p-4">
+            <a href={`/services/${card.title}`}>
             <div
               className="bg-white p-4 rounded shadow h-[348px] bg-cover bg-top flex justify-between items-end relative"
 
@@ -29,7 +30,7 @@ const Page = () => {
                 
            
               
-            </div>
+            </div></a>
           </div>
         ))}
         </div>
