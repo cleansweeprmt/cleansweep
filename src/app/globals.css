@@ -117,6 +117,10 @@
 .slick-dots li.slick-active button:before {
   color: black;
 }
+.job-details ul{
+  list-style-type: disc;
+  
+}
 
 /* == Contact == */
 section.contact {
