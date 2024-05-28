@@ -35,7 +35,7 @@ export default function Home() {
             {/* <Image src="/wansom/articles.jpg" alt="Job Rotation" width={400} height={200} className="w-full h-48 object-cover"/> */}
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-gray-600 text-sm"><i className="far fa-calendar-alt"></i> Nov 09, 2023</p>
+                <p className="text-gray-600 text-sm"><i className="far fa-calendar-alt"></i> {new Date(post?.date).toDateString()}</p>
                 <span className="bg-teal-600 text-white text-xs font-semibold px-2 py-1 rounded">HR GUIDES</span>
               </div>
               <Link href="/resources/exit-interview-tips">
