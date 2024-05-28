@@ -1,7 +1,6 @@
 
 import Image from 'next/image'
 import PageHeader from '../../(components)/header';
-
 const Page = () => {
     return (   <div>
      <PageHeader title={'service'}/>
