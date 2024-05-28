@@ -1,19 +1,12 @@
 
 import Image from 'next/image'
+import PageHeader from '../../(components)/header';
 
 const Page = () => {
     return (   <div>
-        <div className="bg-white">
-            {/* Call to Action Section */}
-            <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white p-4 py-16 container mt-8">
-                <div className="flex items-start md:mb-0">
-                    <h1 className="text-4xl font-bold text-left text-black">Performance Management</h1>
-                </div>
-            </div>
-        </div>
+     <PageHeader title={'service'}/>
         <div className="font-sans max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8  container">
             <div className="flex flex-col lg:flex-row">
-                {/* Sidebar */}
                 <div className="bg-white p-4 lg:w-1/4">
                     <ul className="bg-teal-700 p-4  text-white rounded-md overflow">
                         <li className="mb-2 py-2">
