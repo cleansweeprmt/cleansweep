@@ -1,20 +1,52 @@
+'use client'
+import { useEffect, useState } from "react";
 import PageHeader from "../(components)/header";
 import { services } from "../(services)/data";
 const Page = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading,setLoading]=useState(true)
+  useEffect(() => {
+    setLoading(true)
+      fetch("https://hrfleek.com/wp-json/wp/v2/catalogue")
+      .then((response) => response.json())
+      .then(async (posts) => {
+        const updatedPosts = await Promise.all(posts.map(async (post) => {
+          const imageResponse = await fetch(
+            `https://hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
+          );
+          const image = await imageResponse.json();
+          return {
+            ...post,
+            featured_image_url: image.source_url,
+          };
+        }));
+        setLoading(false)
+        console.log(updatedPosts);
+        setPosts(updatedPosts);
+      })
+      .catch((error) => setLoading(false));
+  }, []);
     return ( <div >
     
     <PageHeader title={'Our Services'}/>
+    {loading&&(
+          <div className='w-full flex items-center justify-center py-10'>
+            <div className=" flex justify-center items-center">
+  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
+</div> 
+          </div>
+        )}
     <section className="container mx-auto px-5 lg:px-20 py-10">
         <h1 className="text-2xl text-center text-primary font-semibold">Our Services</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3">
-        {services.map((card, index) => (
+        {posts.map((card, index) => (
           <div key={index} className="p-4">
-            <a href={`/services/${card.title}`}>
+            <a href={`/services/${card.slug}`}>
             <div
               className="bg-white p-4 rounded shadow h-[348px] bg-cover bg-top flex justify-between items-end relative"
 
 
-              style={{ backgroundImage: `url(${card.img})` }}
+              style={{ backgroundImage: `url(${card?.featured_image_url})` }}
             >
                 <div className="bg-transparent h-full w-full absolute top-0 left-0  hover:bg-[#0C9494] hover:opacity-50 flex items-center text-transparent hover:text-white justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10 z-10">
@@ -23,8 +55,8 @@ const Page = () => {
 
                 </div>
                 <div>
-                <h1 className=" font-extrabold text-white text-2xl ">
-                {card.title}
+                <h1 className=" font-extrabold text-white text-2xl " dangerouslySetInnerHTML={{ __html: card?.title.rendered }}>
+                
               </h1>
                     </div>
                 

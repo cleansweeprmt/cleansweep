@@ -121,6 +121,10 @@
   list-style-type: disc;
   list-style-position: inside;
 }
+.service-content ul{
+  list-style-type: disc;
+  list-style-position: inside; 
+}
 
 /* == Contact == */
 section.contact {
