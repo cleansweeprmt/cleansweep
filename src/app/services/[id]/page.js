@@ -2,7 +2,6 @@
 'use client'
 import Image from 'next/image'
 import PageHeader from '../../(components)/header';
-import { services } from '../../(services)/data';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 const Page = () => {
