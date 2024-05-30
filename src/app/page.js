@@ -26,7 +26,7 @@ export default function Home() {
             <h1 className="section-title text-dark">
           Our Services
           </h1>
-          <p className="text-dim text-md"> HRFLLEK is your one-stop place
+          <p className="text-dim text-md"> HRFLEEK is your one-stop place
 for Human resource Services</p>
             </div>
             <a
