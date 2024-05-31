@@ -64,12 +64,12 @@ const Page = () => {
             <p className="text-gray-700 mb-4" dangerouslySetInnerHTML={{ __html: post?.content.rendered }}></p>
           </div>
           <div className="flex justify-between items-center mb-8">
-            <button
-              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
-              onClick={handleApplyClick}
+            <a
+              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" href='mailto:recruitment@hrfleek.com'
+             
             >
               Apply
-            </button>
+            </a>
           </div>
           {isPopupOpen && <PopupForm isOpen={isPopupOpen} onClose={handleClosePopup} />}
         </div>
