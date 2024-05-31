@@ -62,9 +62,9 @@ const ServiceSlider = () => {
 
                 </div>
                 <div>
-                <h1 className=" font-extrabold text-white text-2xl ">
+                <a className=" font-extrabold text-white text-2xl cursor-pointer " href={`/services/${card.title}`}>
                 {card.title}
-              </h1>
+              </a>
                     </div>
                 
            
