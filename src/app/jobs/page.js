@@ -29,16 +29,6 @@ const Page = () => {
         )}
         {!loading&&(
              <section className="container mx-auto px-5 lg:px-20 py-10">
-             <form class="w-full mx-auto">
-       <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Filter by:</label>
-       <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-         <option selected>Department</option>
-         <option value="US">Software Engineer</option>
-         <option value="CA">Digital Marketing</option>
-         <option value="FR">Human Resource</option>
-         <option value="DE">Finance</option>
-       </select>
-     </form>
      <div className="shadow-lg rounded-md bg-gray-50 my-5 p-4">
       {posts.map((post,index)=>(
          <div className="flex  border-b-[2px] border-gray-300 border-solid p-3  items-center justify-between mb-2" key={index}>
