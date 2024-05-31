@@ -12,7 +12,7 @@ const CalendlyWidget = () => {
 
   return showWidget ? (
     <InlineWidget 
-      url="https://calendly.com/kelvinchebon90/hr-fleek" 
+      url="https://calendly.com/fotieno-gtwh" 
       styles={{ height: '600px', width: '100%' }} 
     />
   ) : null;
