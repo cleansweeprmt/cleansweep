@@ -56,11 +56,11 @@ const PopupForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-20">
       <div className="bg-white rounded-lg p-6 w-full max-w-lg">
-        <h2 className="text-2xl mb-4">Apply for the Job</h2>
+        <h2 className="text-2xl mb-4">Subscribe to Newsletter</h2>
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="block text-sm font-bold mb-2">Name</label>
             <input
               type="text"
@@ -70,19 +70,20 @@ const PopupForm = ({ isOpen, onClose }) => {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2">Email</label>
             <input
               type="email"
               name="email"
+              placeholder='Enter your email'
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="block text-sm font-bold mb-2">Phone</label>
             <input
               type="text"
@@ -112,7 +113,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               onChange={handleChange}
               required
             />
-          </div>
+          </div> */}
           <div className="flex justify-end">
             <button
               type="button"
@@ -125,7 +126,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               type="submit"
               className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
             >
-              Apply
+              Subscribe
             </button>
           </div>
         </form>
