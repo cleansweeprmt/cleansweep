@@ -1,9 +1,7 @@
 'use client'
-import Image from 'next/image';
 import PageHeader from '../../(components)/header';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import Loader from '../../(components)/buttonLoader';
 const Page = () => {
     
   const {id}  = useParams();
@@ -51,7 +49,7 @@ const Page = () => {
         {/* Main Content */}
         
          
-            {!loading&&(<div className="flex">
+            {!loading&&(<div className="flex flex-col md:flex-row">
                    <div className="lg:basis-3/4 lg:pr-8">
                    {/* Header Section */}
                    <div className="flex flex-col md:flex-row justify-between items-center py-8">
