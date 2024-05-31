@@ -47,8 +47,8 @@ const Page = () => {
           </div>
         )}
         {!loading&&(<>
-            <div className="font-sans max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8  container">
-            <div className="flex flex-col lg:flex-row">
+            <div className="font-sans mx-auto py-10 px-4 sm:px-6 lg:px-8  container">
+            <div className="flex flex-col-reverse lg:flex-row">
                 <div className="bg-white p-4 lg:w-1/4">
 
                     <ul className="bg-teal-700 p-4  text-white rounded-md overflow">
@@ -63,7 +63,7 @@ const Page = () => {
                 </div>
 
                 {/* Main Content */}
-                <div className="p-8 pt-4 lg:w-3/4">
+                <div className="pt-4 lg:w-3/4">
                     <div>
                         <div className="mb-6 rounded-md overflow-hidden">
                             <img src={post?.featured_image_url} alt="Placeholder Image" className="mx-auto" />
@@ -78,7 +78,7 @@ const Page = () => {
         </div>
         <div className="bg-teal-700">
             {/* Call to Action Section */}
-            <div className=" max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-white p-4 py-16 container flex flex-col md:flex-row items-center justify-between rounded mt-8">
+            <div className="mx-auto px-2 sm:px-6 lg:px-8 text-white p-4 py-16 container flex flex-col md:flex-row items-center justify-between rounded mt-8">
                 <div className="flex items-center mb-4 md:mb-0">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
                         <Image src="/wansom/calender.png" alt="Calendar Icon" width={24} height={24} />
