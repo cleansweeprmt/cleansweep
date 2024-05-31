@@ -1,9 +1,22 @@
 "use client";
+import { useEffect, useState } from 'react';
 import ClientSlider from './(components)/clientSlider'
 import ServiceSlider from './(components)/servicesSlider'
 import Testimonials from './(components)/testimonials'
+import PopupForm from '../components/Form/PopupForm';
 
 export default function Home() {
+   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+  const handleBeforeUnload = () => {
+    setIsPopupOpen(true);
+  };
+  useEffect(() => {
+
+handleBeforeUnload()
+  }, []);
 
   return (
     <div className="bg-white">
@@ -19,6 +32,7 @@ export default function Home() {
             BOOK A CONSULTATION
           </a>
         </section>
+        {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
         <ClientSlider/>
         <section className="container mx-auto px-5 lg:px-20 py-10" id="about">
           <div className="flex items-center justify-between">

@@ -42,10 +42,10 @@ const PopupForm = ({ isOpen, onClose }) => {
       });
 
       if (response.ok) {
-        alert('Application sent successfully!');
+        alert('Thank you for subscribing to our newsletter!');
         onClose();
       } else {
-        alert('Failed to send application. Please try again.');
+        alert('Something went wrong. Please try again.');
       }
     } catch (error) {
       console.error('Error:', error);
