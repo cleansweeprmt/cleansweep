@@ -31,10 +31,10 @@ const Page = () => {
              <section className="container mx-auto px-5 lg:px-20 py-10">
      <div className="shadow-lg rounded-md bg-gray-50 my-5 p-4">
       {posts.map((post,index)=>(
-         <div className="flex  border-b-[2px] border-gray-300 border-solid p-3  items-center justify-between mb-2" key={index}>
+         <div className="flex flex-col md:flex-row  border-b-[2px] border-gray-300 border-solid p-3  items-center justify-between mb-2" key={index}>
          <a href={`/jobs/${post.slug}`} className=" hover:underline text-lg hover:text-[#0C9494] text-black" dangerouslySetInnerHTML={{ __html: post?.title.rendered }} ></a>
          <div className="flex items-center gap-3">
-          <p>Recruiter: <span className="text-gray-400 text-md">{post?.meta._company_name}</span></p>
+          <p className="hidden lg:block">Recruiter: <span className="text-gray-400 text-md">{post?.meta._company_name}</span></p>
         
          <a href={`/jobs/${post.slug}`} className="flex justify-between items-center border-solid border-2 border-[#0C9494] px-5 py-2 rounded-lg">
          <p>More Details</p>
