@@ -14,7 +14,7 @@ export default function Home() {
               </h1>
               <a
            href="/consultation"
-            className="uppercase px-4 py-2 text-sm font-medium  text-center text-primary transition-colors duration-150 bg-tranparent border-2 border-primary rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
+            className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
           >
             BOOK A CONSULTATION
           </a>
