@@ -85,8 +85,8 @@ const Page = () => {
                     </div>
                     <p className="text-2xl font-bold">Call adviser for HRfleek outsourcing service business</p>
                 </div>
-                <a href="#" className="bg-white text-teal-700 py-2 px-4 rounded border-2 border-white hover:bg-teal-600 hover:text-white transition">
-                    BOOK A CONSULTANT
+                <a href="/consultation" className="bg-white text-teal-700 py-2 px-4 rounded border-2 border-white hover:bg-teal-600 hover:text-white transition">
+                    BOOK A CONSULTATION
                 </a>
             </div>
         </div>

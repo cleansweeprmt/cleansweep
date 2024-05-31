@@ -62,7 +62,7 @@ const Page = () => {
                        </div>
                    </div>
                    <img src={post?.featured_image_url} alt={post?.title.rendered} width={800} height={400} className="mb-8 rounded-md" />
-                   <div dangerouslySetInnerHTML={{ __html: post?.content.rendered }}>
+                   <div dangerouslySetInnerHTML={{ __html: post?.content.rendered }} className='article'>
    
                    </div>
                </div>

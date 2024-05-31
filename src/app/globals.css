@@ -125,6 +125,10 @@
   list-style-type: disc;
   list-style-position: inside; 
 }
+.article a{
+  color: #13A8BD;
+  text-decoration: underline;
+}
 
 /* == Contact == */
 section.contact {

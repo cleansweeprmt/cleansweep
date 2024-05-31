@@ -21,13 +21,13 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <PageHeader title={'Articles'}/>
+      <PageHeader title={'View Our Articles'}/>
       {/* Other components or content can be here */}
 
 
       {/* Resource Section */}
       <div className="container mx-auto px-5 lg:px-20 py-10">
-        <h2 className="text-4xl font-bold text-center">View Our <span className="text-teal-600">Articles</span></h2>
+        {/* <h2 className="text-4xl font-bold text-center">View Our <span className="text-teal-600">Articles</span></h2> */}
         {loading&&(
           <div className='w-full flex items-center justify-center py-10'>
             <div className=" flex justify-center items-center">
