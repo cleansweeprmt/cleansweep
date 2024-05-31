@@ -62,7 +62,7 @@ const Page = () => {
         {products.map((product) => (
           <div key={product?.id} className="flex items-center justify-between p-5 rounded-lg shadow-lg bg-gray-50 border-b-2 border-solid border-gray-800">
            <div className="flex items-center gap-10"> <h2>{product?.name}</h2>
-            {product?.price==0&&(<p className="text-red-500 text-md">FREE</p>)}
+            {product?.price==0&&(<p className="text-red-500 text-md me-3">FREE</p>)}
             {product?.price>0&&(<p className="text-primary text-md">KSH {product?.price}</p>)}</div>
             <button className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple" onClick={() => handleGetDocument(product.slug)}>GET DOCUMENT</button>
            
