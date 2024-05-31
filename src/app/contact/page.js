@@ -49,22 +49,11 @@ const Page = () => {
       </section>
 
       <section className="container mx-auto px-5 lg:px-20 py-10">
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-col-reverse lg:flex-row justify-between lg:gap-10">
 
           {/* Left Section */}
           <div className="w-full lg:w-1/2 px-4">
-            <div className="mb-6">
-              <h1 className="text-4xl font-semibold text-gray-800 mb-2">Have be any Question? feel free to contact with us.</h1>
-              <p className="text-gray-600 text-lg">
-                We undertake HR and Culture Audits to assess your company’s Human Resources practices and organizational culture. It aims to identify areas of strength and weakness, allowing you to make informed decisions for improvement.
-              </p>
-            </div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-blue-600"><i className="fab fa-facebook-f"></i></a>
-              <a href="#" className="text-blue-300"><i className="fab fa-twitter"></i></a>
-              <a href="#" className="text-blue-600"><i className="fab fa-linkedin-in"></i></a>
-              <a href="#" className="text-green-500"><i className="fab fa-instagram"></i></a>
-            </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.800665020861!2d36.808691074965616!3d-1.2941083986935926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11e9e9f172db%3A0xde236816f452452b!2sI%26M%20Bank%202nd%20Ngong%20Avenue%20Branch%2C%20Ngong%20Ave%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1717142028581!5m2!1sen!2ske" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           {/* Right Section */}
@@ -89,24 +78,13 @@ const Page = () => {
                 {/* Add more options here */}
               </select>
               <textarea placeholder="Write Details" className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4" rows="4"></textarea>
-              <button className="bg-black text-white p-3 rounded w-full">BOOK A CONSULTATION</button>
+              <button className="bg-black text-white p-3 rounded w-full">SEND MESSAGE</button>
             </div>
           </div>
 
         </div>
       </section>
-      <section className="container mx-auto px-5 lg:px-20 py-10">
-        <div className="flex flex-wrap justify-between">
-        <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14203.361560006904!2d36.811993586127734!3d-1.2868402233912652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e0!3m2!1sen!2ske!4v1717080747323!5m2!1sen!2ske"
-  className="w-full h-[600px]"
-  style={{ border: "0px" }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-></iframe>
-        </div>
-      </section>
+    
     </div>
   );
 };
