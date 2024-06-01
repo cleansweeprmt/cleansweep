@@ -77,7 +77,7 @@ export default function Home() {
           >
             {loading && num === page && (
               <div className="flex justify-center items-center mr-2">
-                <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-black"></div>
+                <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-white"></div>
               </div>
             )}
             {num}
