@@ -4,8 +4,10 @@ const PopupForm = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    setLoading(true)
     e.preventDefault();
 
     try {
@@ -18,17 +20,15 @@ const PopupForm = ({ isOpen, onClose }) => {
       });
 
       const data = await response.json();
-      console.log(data);
-      
-
       if (!response.ok) {
         throw new Error(data.message || 'Something went wrong');
       }
-
+      setLoading(false)
       setMessage('Subscription successful!');
       setError('');
       setEmail('');
     } catch (err) {
+      setLoading(false)
       setError(err.message);
       setMessage('');
     }
@@ -63,7 +63,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mr-4"
               onClick={onClose}
             >
-              Cancel
+              Close
             </button>
             <button
               type="submit"
