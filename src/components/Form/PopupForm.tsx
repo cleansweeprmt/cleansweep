@@ -1,57 +1,39 @@
 import React, { useState } from 'react';
 
 const PopupForm = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    resume: null,
-    cv: null
-  });
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === 'resume' || name === 'cv') {
-      setFormData({
-        ...formData,
-        [name]: files[0]
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value
-      });
-    }
-  };
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const form = new FormData();
-    form.append('name', formData.name);
-    form.append('email', formData.email);
-    form.append('phone', formData.phone);
-    form.append('resume', formData.resume);
-    form.append('cv', formData.cv);
 
     try {
-      // Send form data to the server or email service
-      const response = await fetch('../../app/api/mailer/send-email', {
+      const response = await fetch('api/mailer', {
         method: 'POST',
-        body: form
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
       });
 
-      if (response.ok) {
-        alert('Thank you for subscribing to our newsletter!');
-        onClose();
-      } else {
-        alert('Something went wrong. Please try again.');
+      const data = await response.json();
+      console.log(data);
+      
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
       }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Failed to send application. Please try again.');
+
+      setMessage('Subscription successful!');
+      setError('');
+      setEmail('');
+    } catch (err) {
+      setError(err.message);
+      setMessage('');
     }
   };
+
 
   if (!isOpen) return null;
 
@@ -60,17 +42,7 @@ const PopupForm = ({ isOpen, onClose }) => {
       <div className="bg-white rounded-lg p-6 w-full max-w-lg">
         <h2 className="text-2xl mb-4">Subscribe to Newsletter</h2>
         <form onSubmit={handleSubmit}>
-          {/* <div className="mb-4">
-            <label className="block text-sm font-bold mb-2">Name</label>
-            <input
-              type="text"
-              name="name"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div> */}
+         
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2">Email</label>
             <input
@@ -78,42 +50,13 @@ const PopupForm = ({ isOpen, onClose }) => {
               name="email"
               placeholder='Enter your email'
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          {/* <div className="mb-4">
-            <label className="block text-sm font-bold mb-2">Phone</label>
-            <input
-              type="text"
-              name="phone"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-bold mb-2">Resume</label>
-            <input
-              type="file"
-              name="resume"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-bold mb-2">CV</label>
-            <input
-              type="file"
-              name="cv"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              onChange={handleChange}
-              required
-            />
-          </div> */}
+          {message && <p>{message}</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
           <div className="flex justify-end">
             <button
               type="button"
