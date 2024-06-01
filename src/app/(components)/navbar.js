@@ -157,7 +157,7 @@ const Navbar = () => {
           <a href="/clients">Clients</a>
           <a href="/jobs">Jobs</a>
 
-          <a href="/contact">Contact</a>
+          <a href="/contact">Contact Us</a>
 
           <button
             onClick={() => {

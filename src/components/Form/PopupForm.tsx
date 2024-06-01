@@ -41,7 +41,7 @@ const PopupForm = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-20">
       <div className="bg-white rounded-lg p-6 w-full max-w-lg">
-        <h2 className="text-2xl mb-4">Subscribe to Newsletter</h2>
+        <h2 className="text-2xl mb-4">Subscribe to our Newsletter</h2>
         <form onSubmit={handleSubmit}>
          
           <div className="mb-4">
