@@ -56,7 +56,7 @@ const PopupForm = ({ isOpen, onClose }) => {
               required
             />
           </div>
-          {message && <p>{message}</p>}
+          {message && <p className='text-primary'>{message}</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
           <div className="flex justify-end">
             <button

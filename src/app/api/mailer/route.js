@@ -22,9 +22,9 @@ export async function POST(request) {
 
   const mailOptions = {
     from: 'info@dialalawyer.africa',
-    to: email,
+    to: [email,'info@hrfleek.com'],
     subject: 'Thank you',
-    text: 'Thank you for subscribing to our newsletter!',
+    text: `Thank you ${email} for subscribing to our newsletter!`,
   };
 
   try {
