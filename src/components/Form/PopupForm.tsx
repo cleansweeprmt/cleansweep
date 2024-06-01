@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Loader from '../../app/(components)/buttonLoader';
 
 const PopupForm = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
@@ -67,8 +68,9 @@ const PopupForm = ({ isOpen, onClose }) => {
             </button>
             <button
               type="submit"
-              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded flex items-center"
             >
+              {loading&&(<Loader/>)}
               Subscribe
             </button>
           </div>
