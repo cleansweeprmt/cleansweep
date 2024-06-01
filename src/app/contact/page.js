@@ -1,6 +1,61 @@
+'use client'
+import { useState } from "react";
 import PageHeader from "../(components)/header";
+import Loader from "../(components)/buttonLoader";
 
 const Page = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    company: '',
+    details: '',
+  });
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    setLoading(true)
+    e.preventDefault();
+    setMessage('');
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+      setLoading(false)
+      setMessage('Form submitted successfully!');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        company: '',
+        details: '',
+      });
+    } catch (err) {
+      setLoading(false)
+      setError(err.message);
+    }
+  };
+
   return (
     <div>
       <PageHeader title={'Contact Us'} />
@@ -61,28 +116,67 @@ const Page = () => {
 
           {/* Right Section */}
           <div className="w-full lg:w-1/2 px-4 mt-6 lg:mt-0">
-            <div className="bg-white p-8 shadow rounded-lg">
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="First Name" className="border p-3 rounded outline-none focus:border-blue-500" />
-                <input type="text" placeholder="Last Name" className="border p-3 rounded outline-none focus:border-blue-500" />
-              </div>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="Phone Number" className="border p-3 rounded outline-none focus:border-blue-500" />
-                <input type="text" placeholder="Email address" className="border p-3 rounded outline-none focus:border-blue-500" />
-              </div>
-              <input type="text" placeholder="Company/Organization Name" className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4" />
-              <select className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4">
-                <option>Consult HR Expert</option>
-                <option>Outsourced HR Manager</option>
-                <option>HR contracts & Documents</option>
-                <option>Recruitment Services</option>
-                <option>Immigration Services</option>
-                <option>Employment Law Audits</option>
-                {/* Add more options here */}
-              </select>
-              <textarea placeholder="Write Details" className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4" rows="4"></textarea>
-              <button className="bg-black text-white p-3 rounded w-full">SEND MESSAGE</button>
-            </div>
+          <form onSubmit={handleSubmit} className="bg-white p-8 shadow rounded-lg">
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <input
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            placeholder="First Name"
+            className="border p-3 rounded outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            placeholder="Last Name"
+            className="border p-3 rounded outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            className="border p-3 rounded outline-none focus:border-blue-500"
+          />
+          <input
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email address"
+            className="border p-3 rounded outline-none focus:border-blue-500"
+          />
+        </div>
+        <input
+          type="text"
+          name="company"
+          value={formData.company}
+          onChange={handleChange}
+          placeholder="Company/Organization Name"
+          className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
+        />
+        <textarea
+          name="details"
+          value={formData.details}
+          onChange={handleChange}
+          placeholder="Write Details"
+          className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
+          rows="4"
+        ></textarea>
+            {message && <p className="text-primary">{message}</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit" className="bg-black text-white p-3 rounded w-full flex items-center gap-2 justify-center">
+          {loading&&(<Loader/>)}
+          SEND MESSAGE
+        </button>
+      </form>
+  
           </div>
 
         </div>
