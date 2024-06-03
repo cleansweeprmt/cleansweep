@@ -22,7 +22,6 @@ const Page = () => {
         setLoading(false)
         setPosts(posts);
         const singlePost = posts.find((post) => post.slug === id);
-        console.log(singlePost);
         setPost(singlePost);
       })
       .catch((error) => setLoading(false));

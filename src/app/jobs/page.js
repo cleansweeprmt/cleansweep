@@ -12,7 +12,6 @@ const Page = () => {
       .then(async (posts) => {
         setLoading(false)
         setPosts(posts);
-        console.log(posts);
         
       })
       .catch((error) => setLoading(false));
