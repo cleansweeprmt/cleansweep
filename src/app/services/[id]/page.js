@@ -29,9 +29,9 @@ const Page = () => {
           return Promise.all(promises);
         })
         .then((posts) => {
-          console.log(posts);
           setLoading(false)
-          setPosts(posts);
+          const reversedPosts = posts.reverse();
+          setPosts(reversedPosts);
           const singlePost =posts.find((post)=>post.slug===id)
           setPost(singlePost)
         })

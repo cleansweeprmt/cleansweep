@@ -54,9 +54,9 @@ const Page = () => {
             <div className="py-1 px-4 bg-secondary rounded-xl">
               <p className="text-sm text-gray-600">Posted on: {new Date(post?.date).toDateString()}</p>
             </div>
-            <div className="py-1 px-4 bg-red-100 rounded-xl">
+            {/* <div className="py-1 px-4 bg-red-100 rounded-xl">
               <p className="text-sm text-gray-600">Application Deadline: {new Date(post?.date).toDateString()}</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="mb-10 job-details">

@@ -20,9 +20,9 @@ const Page = () => {
             featured_image_url: image.source_url,
           };
         }));
+        const reversedPosts = updatedPosts.reverse();
         setLoading(false)
-        console.log(updatedPosts);
-        setPosts(updatedPosts);
+        setPosts(reversedPosts);
       })
       .catch((error) => setLoading(false));
   }, []);
