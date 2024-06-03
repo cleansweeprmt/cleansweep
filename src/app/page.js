@@ -22,8 +22,8 @@ handleBeforeUnload()
     <div className="bg-white">
       <main className="min-h-screen flex-col items-center justify-between bg-white">
         <section className="py-12  bg-cover hero bg-center lg:bg-top min-h-screen flex flex-col items-start justify-center gap-5 container mx-auto px-5 lg:px-20">
-        <h1 className="hero-title text-primary mb-5 text-start lg:max-w-[50%] lg:mt-28">
-                Your preferred partner in managing your entire HR cycle
+        <h1 className="hero-title text-primary mb-5 text-start lg:max-w-[50%] lg:mt-28 capitalize">
+                Your Human  Resource solution Partner
               </h1>
               <a
            href="/consultation"
@@ -40,8 +40,7 @@ handleBeforeUnload()
             <h1 className="section-title text-dark">
           Our Services
           </h1>
-          <p className="text-dim text-md"> HRFLEEK is your one-stop place
-for Human resource Services</p>
+          <p className="text-dim text-md"> Offering skilled and affordable Human Resource Services</p>
             </div>
             <a
            href="/services"
