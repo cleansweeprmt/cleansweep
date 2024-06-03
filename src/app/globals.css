@@ -120,6 +120,11 @@
 .job-details ul{
   list-style-type: disc;
   list-style-position: inside;
+  margin-bottom: 20px;
+}
+.job-details a{
+  color: #0C9494;
+  text-decoration: underline;
 }
 .service-content ul{
   list-style-type: disc;

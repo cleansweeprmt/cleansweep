@@ -51,16 +51,16 @@ const Page = () => {
         <div className="container mx-auto px-5 lg:px-20 py-10">
           <h1 className="text-2xl font-bold text-gray-900 mb-4" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
           <div className="flex items-center gap-4">
-            <div className="py-1 px-4 bg-secondary rounded-xl">
+            {/* <div className="py-1 px-4 bg-secondary rounded-xl">
               <p className="text-sm text-gray-600">Posted on: {new Date(post?.date).toDateString()}</p>
-            </div>
+            </div> */}
             {/* <div className="py-1 px-4 bg-red-100 rounded-xl">
               <p className="text-sm text-gray-600">Application Deadline: {new Date(post?.date).toDateString()}</p>
             </div> */}
           </div>
 
           <div className="mb-10 job-details">
-            <img src="/logo.png" alt="Virtual HR" className="h-32 mb-4" />
+            {/* <img src="/logo.png" alt="Virtual HR" className="h-32 mb-4" /> */}
             <p className="text-gray-700 mb-4" dangerouslySetInnerHTML={{ __html: post?.content.rendered }}></p>
           </div>
           <div className="flex justify-between items-center mb-8">
