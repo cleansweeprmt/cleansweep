@@ -72,7 +72,7 @@ useEffect(() => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 dangerouslySetInnerHTML={{ __html:category.name}}
-                className={`tab bg-black border-white border-r-[1px] border-b-[1px] border-solid p-4 text-white ${activeCategory === category.id ? 'active bg-primary' : ''}`}
+                className={`tab bg-black border-white border-r-[1px] border-b-[1px] border-solid p-2 text-white text-sm ${activeCategory === category.id ? 'active bg-primary' : ''}`}
             >
             </button>
         ))}
