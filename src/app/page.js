@@ -14,10 +14,11 @@ export default function Home() {
     setIsPopupOpen(true);
   };
   useEffect(() => {
-
-handleBeforeUnload()
+    const timeoutId = setTimeout(() => {
+      handleBeforeUnload();
+    }, 4000);
+    return () => clearTimeout(timeoutId);
   }, []);
-
   return (
     <div className="bg-white">
       <main className="min-h-screen flex-col items-center justify-between bg-white">

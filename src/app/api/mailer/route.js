@@ -12,7 +12,7 @@ export async function POST(request) {
   }
 
   const mailOptions = {
-    from: 'info@dialalawyer.africa',
+    from: 'info@hrfleek.com',
     to: [email,'info@hrfleek.com'],
     subject: 'Thank you',
     text: `Thank you ${email} for subscribing to our newsletter!`,

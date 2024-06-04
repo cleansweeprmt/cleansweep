@@ -128,13 +128,15 @@
 }
 .service-content ul{
   list-style-type: disc;
-  list-style-position: inside; 
+  list-style-position: outside;
+  margin-bottom: 10px; 
+  margin-left: 40px;
 }
 .service-content h3{
   color: #005c4d;
   font-size: 18PX;
   font-weight: 600;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .article a{
   color: #13A8BD;
