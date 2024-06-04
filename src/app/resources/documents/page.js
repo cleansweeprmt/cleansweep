@@ -8,8 +8,11 @@ async function fetchCategories() {
       throw new Error(`Error: ${response.statusText}`);
   }
   const data = await response.json();
+  const findNew=data.filter((d)=>d.name=='hiring')
+  console.log(data,findNew);
   return data;
 }
+
 
 const Page = () => {
   const [categories, setCategories] = useState([]);
@@ -17,15 +20,21 @@ const Page = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const newCategories=[
+    {id:45,name:'Free Human Resource Documents'},
+  {id:47,name:'hiring'},
+  {id:46,name:'Employment Contracts & Agreements'},
+  {id:89,name:'Induction & Onboarding'},
+  {id:64,name:'Employee Policies'},
+  {id:69,name:'Job Roles & Descriptions'},
+  {id:79,name:'Performance Management'}]
 
   useEffect(() => {
     async function loadCategories() {
-        try {
-            const categoriesData = await fetchCategories();
-            setCategories(categoriesData);
-            if (categoriesData.length > 0) {
-                setActiveCategory(categoriesData[0].id);
-            }
+        try {     
+            fetchCategories()    
+            setCategories(newCategories);
+            setActiveCategory(newCategories[0].id);
         } catch (err) {
             setError(err.message);
         }
@@ -66,18 +75,13 @@ useEffect(() => {
   return (
     <div>
       <PageHeader title={'Document Library'}/>
-    <div className="tabs bg-black">
-        {categories.map((category) => (
-            <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                dangerouslySetInnerHTML={{ __html:category.name}}
-                className={`tab bg-black border-white border-r-[1px] border-b-[1px] border-solid p-2 text-white text-sm ${activeCategory === category.id ? 'active bg-primary' : ''}`}
-            >
-            </button>
-        ))}
-    </div>
-    <div className="products">
+      <div className="products container mx-auto px-5 lg:px-20 py-10 flex flex-col md:flex-row gap-5 lg:gap-10">
+      <div className="lg:basis-1/4">
+                    {newCategories.map((i)=>(
+                        <div  className={`tab bg-gray-100 shadow-md rounded border-gray-800  border-b-[1px] border-solid px-4 py-2 text-black text-sm ${activeCategory === i.id ? 'active bg-primary' : ''}`}  onClick={() => setActiveCategory(i.id)}>{i.name}</div>
+                    ))}
+                </div>
+                <div className="w-full lg:basis-3/4">
         {loading ? (
              <div className='w-full flex items-center justify-center py-10'>
              <div className=" flex justify-center items-center">
@@ -85,7 +89,10 @@ useEffect(() => {
  </div> 
            </div>
         ) : (
-            products.map((product) => (
+
+                
+                <div>
+               {products.map((product) => (
               <div key={product?.id} className="flex items-center justify-between p-5 rounded-lg shadow-lg bg-gray-50 border-b-2 border-solid border-gray-800">
               <div className="flex items-center gap-10"> <h2>{product?.name}</h2>
                {product?.price==0&&(<p className="text-red-500 text-md me-3">FREE</p>)}
@@ -94,9 +101,15 @@ useEffect(() => {
               
                
              </div>
-            ))
+            ))}
+                </div>
+            
+         
         )}
     </div>
+      </div>
+
+   
     {error && <p>Error: {error}</p>}
     
 </div>
