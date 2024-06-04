@@ -22,7 +22,7 @@ const Page = () => {
   const [error, setError] = useState(null);
   const newCategories=[
     {id:45,name:'Free Human Resource Documents'},
-  {id:47,name:'hiring'},
+  {id:47,name:'Hiring'},
   {id:46,name:'Employment Contracts & Agreements'},
   {id:89,name:'Induction & Onboarding'},
   {id:64,name:'Employee Policies'},
@@ -75,6 +75,11 @@ useEffect(() => {
   return (
     <div>
       <PageHeader title={'Document Library'}/>
+      <div className="container mx-auto px-5 lg:px-20 py-5">
+        <h2 className="text-md text-dim">Our document portal service offers a comprehensive library of downloadable HR documents relevant to various employment situations. However, it's important to understand the limitations and consider seeking legal advice for complex situations. <br/><br/>
+        Whether you are growing a business or supporting its success, HRFLEEK is here to help you. We have created a broad range of free resources to guide you through all the key elements of starting, growing, and protecting a successful business.</h2>
+      
+      </div>
       <div className="products container mx-auto px-5 lg:px-20 py-10 flex flex-col md:flex-row gap-5 lg:gap-10">
       <div className="lg:basis-1/4">
                     {newCategories.map((i)=>(
