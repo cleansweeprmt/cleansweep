@@ -1,7 +1,16 @@
+'use client'
 import "./component.css"
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import Logo from '../assets/logo.png'
 const Footer = () => {
     return ( 
         <footer className="bg-gray-800 rounded-top-lg shadow">
+    <FloatingWhatsApp   phoneNumber="+254741511183"
+        accountName="HRFLEEK"
+        avatar='./logo.png'
+        allowEsc
+        notification
+        notificationSound />
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
             <a href="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
