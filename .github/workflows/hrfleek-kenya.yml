@@ -70,5 +70,5 @@ jobs:
             npm run build
 
             # Restart the application (assuming you're using PM2 or similar process manager)
-            pm2 restart your-app-name || pm2 start npm --name "your-app-name" -- start
+            pm2 restart hrfleek || pm2 start npm --name "hrfleek" -- start
           EOF
