@@ -1,0 +1,74 @@
+name: Deploy Next.js to VPS
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.2.0'  # Adjust Node.js version as needed
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test  # Ensure you have tests configured
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: nextjs-build
+          path: .next
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: nextjs-build
+          path: .next
+
+      - name: Deploy to VPS
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" | ssh-add -
+          ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << 'EOF'
+            # Navigate to your project directory or clone the repository
+            cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
+            cd /var/www/html/hrfleek-v2
+
+            # Pull the latest changes
+            git pull origin main
+
+            # Install dependencies and build the project
+            npm install
+            npm run build
+
+            # Restart the application (assuming you're using PM2 or similar process manager)
+            pm2 restart your-app-name || pm2 start npm --name "your-app-name" -- start
+          EOF
