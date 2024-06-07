@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22.2.0'  # Adjust Node.js version as needed
+
       - name: Create env file
         run: |
           touch .env
@@ -28,11 +29,12 @@ jobs:
           echo EMAIL_USER=info@hrfleek.com >> .env
           echo EMAIL_PASS=Sat17556 >> .env
           cat .env
+
       - name: Install dependencies
         run: npm install
 
-     # - name: Run tests
-       # run: npm test  # Ensure you have tests configured
+      # - name: Run tests
+      #   run: npm test  # Ensure you have tests configured
 
       - name: Build project
         run: npm run build
@@ -60,25 +62,23 @@ jobs:
       - name: Start SSH Agent and Add Key
         run: |
           eval "$(ssh-agent -s)"
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to VPS
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USER: ${{ secrets.VPS_USER }}
         run: |
-          echo "$SSH_PRIVATE_KEY" | ssh-add -
           ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << 'EOF'
             # Navigate to your project directory or clone the repository
             cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
             cd /var/www/html/hrfleek-v2
 
             # Pull the latest changes
-            git pull origin main
+            git pull origin master
 
             # Install dependencies and build the project
             npm install
