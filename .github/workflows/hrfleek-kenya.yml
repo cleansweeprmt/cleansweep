@@ -64,7 +64,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
         run: |
           echo "$SSH_PRIVATE_KEY" | ssh-add -
-          ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << 'EOF'
+          ssh -o StrictHostKeyChecking=no root@hrfleek.com << 'EOF'
             # Navigate to your project directory or clone the repository
             cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
             cd /var/www/html/hrfleek-v2
