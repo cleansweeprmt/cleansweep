@@ -1,13 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}', 
-      './modules/**/*.{js,ts,jsx,tsx}', 
-      './components/**/*.{js,ts,jsx,tsx}'
-    ]
-  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
