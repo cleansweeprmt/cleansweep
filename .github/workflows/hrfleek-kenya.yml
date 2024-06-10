@@ -59,32 +59,20 @@ jobs:
           name: nextjs-build
           path: .next
 
-      - name: Start SSH Agent and Add Key
-        run: |
-          eval "$(ssh-agent -s)"
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-          ssh-add -l # List fingerprints of all identities added to the agent for debugging
-        shell: bash
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
 
-      - name: Deploy to VPS
+      - name: Deploy to VPS using SSH with Password
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
         run: |
-          ssh -o StrictHostKeyChecking=no -v root@217.76.53.195 << 'EOF'
-            # Navigate to your project directory or clone the repository
-            cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
-            cd /var/www/html/hrfleek-v2
-
-            # Pull the latest changes
-            git pull origin master
-
-            # Install dependencies and build the project
-            npm install
-            npm run build
-
-            # Restart the application (assuming you're using PM2 or similar process manager)
-            pm2 restart hrfleek || pm2 start npm --name "hrfleek" -- start
-          EOF
+          sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} "
+            cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2;
+            cd /var/www/html/hrfleek-v2;
+            git pull origin master;
+            npm install;
+            npm run build;
+            pm2 restart hrfleek || pm2 start npm --name 'hrfleek' -- start;
+          "
