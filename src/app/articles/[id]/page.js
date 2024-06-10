@@ -11,12 +11,12 @@ const Page = () => {
 
   useEffect(() => {
     setLoading(true)
-    fetch("https://hrfleek.com/wp-json/wp/v2/posts")
+    fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/posts")
       .then((response) => response.json())
       .then((posts) => {
         const promises = posts.map((post) => {
           return fetch(
-            `https://hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
+            `https://dashboard.hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
           )
             .then((response) => response.json())
             .then((media) => {

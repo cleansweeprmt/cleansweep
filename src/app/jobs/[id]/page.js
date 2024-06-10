@@ -15,7 +15,7 @@ const Page = () => {
 
   useEffect(() => {
     setLoading(true)
-    fetch("https://hrfleek.com/wp-json/wp/v2/job-listings")
+    fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/job-listings")
       .then((response) => response.json())
       .then((posts) => {
         

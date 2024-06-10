@@ -170,7 +170,7 @@ const Navbar = () => {
 
           <button
             onClick={() => {
-              router.push("https://hrfleek.com/wp-content/uploads/2024/06/HRFLEEK-Brochure-new.pdf");
+              router.push("https://dashboard.hrfleek.com/wp-content/uploads/2024/06/HRFLEEK-Brochure-new.pdf");
             }}
             className="uppercase px-4 py-2 text-sm font-medium  text-center text-primary transition-colors duration-150 bg-tranparent border-2 border-primary rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white lg:ml-3"
           >

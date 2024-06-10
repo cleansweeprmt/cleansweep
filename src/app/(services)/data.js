@@ -70,7 +70,7 @@ export const testimonials=[
 
 export async function getStaticProps() {
     try {
-      const response = await fetch('https://hrfleek.com/wp-json/wp/v2/posts');
+      const response = await fetch('https://dashboard.hrfleek.com/wp-json/wp/v2/posts');
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
