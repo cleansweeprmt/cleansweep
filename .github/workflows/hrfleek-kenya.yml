@@ -59,16 +59,9 @@ jobs:
           name: nextjs-build
           path: .next
 
-      - name: Start SSH Agent and Add Key
+      - name: Deploy to VPS using SSH with Password
         run: |
-          eval "$(ssh-agent -s)"
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
-          ssh-add -l # List fingerprints of all identities added to the agent for debugging
-        shell: bash
-
-      - name: Deploy to VPS
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+          sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} << 'EOF'
             # Navigate to your project directory or clone the repository
             cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
             cd /var/www/html/hrfleek-v2
@@ -84,5 +77,6 @@ jobs:
             pm2 restart hrfleek || pm2 start npm --name "hrfleek" -- start
           EOF
         env:
-          VPS_USER: ${{ secrets.VPS_USER }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
+          VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
