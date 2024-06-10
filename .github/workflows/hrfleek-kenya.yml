@@ -63,23 +63,16 @@ jobs:
         run: sudo apt-get install -y sshpass
 
       - name: Deploy to VPS using SSH with Password
-        run: |
-          sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} << 'EOF'
-            # Navigate to your project directory or clone the repository
-            cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2
-            cd /var/www/html/hrfleek-v2
-
-            # Pull the latest changes
-            git pull origin master
-
-            # Install dependencies and build the project
-            npm install
-            npm run build
-
-            # Restart the application (assuming you're using PM2 or similar process manager)
-            pm2 restart hrfleek || pm2 start npm --name "hrfleek" -- start
-          EOF
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USERNAME: ${{ secrets.VPS_USERNAME }}
           VPS_PASSWORD: ${{ secrets.VPS_PASSWORD }}
+        run: |
+          sshpass -p "${{ secrets.VPS_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_HOST }} "
+            cd /var/www/html/hrfleek-v2 || git clone https://github.com/barizicommunications/hrfleek-v2.git /var/www/html/hrfleek-v2;
+            cd /var/www/html/hrfleek-v2;
+            git pull origin master;
+            npm install;
+            npm run build;
+            pm2 restart hrfleek || pm2 start npm --name 'hrfleek' -- start;
+          "
