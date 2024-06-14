@@ -2,6 +2,11 @@
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 import nodemailer from 'nodemailer';
 
+import { Client } from '@hubspot/api-client';
+
+export const hubspotClient = new Client({ accessToken: process.env.HUBSPOT_API_KEY });
+
+
 export const woocommerce = new WooCommerceRestApi({
     url: "https://hrfleek.com",
     consumerKey: process.env.WC_CONSUMER_KEY,
@@ -19,3 +24,5 @@ export const transporter = nodemailer.createTransport({
       pass: process.env.EMAIL_PASS, // generated ethereal password
     },
   });
+
+

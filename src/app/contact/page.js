@@ -1,33 +1,36 @@
 'use client'
 import { useState } from "react";
 import PageHeader from "../(components)/header";
-import Loader from "../(components)/buttonLoader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
+    email: '',
     firstName: '',
     lastName: '',
     phone: '',
-    email: '',
     company: '',
     details: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
-    setLoading(true)
     e.preventDefault();
+    setIsSubmitting(true);
     setMessage('');
     setError('');
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/hubspot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,30 +38,26 @@ const Page = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong');
+      const result = await response.json();
+      if (response.ok) {
+        setMessage(result.message);
+        toast.success("Thanks for your message")
+      } else {
+        setError(result.message);
       }
-      setLoading(false)
-      setMessage('Form submitted successfully!');
-      setFormData({
-        firstName: '',
-        lastName: '',
-        phone: '',
-        email: '',
-        company: '',
-        details: '',
-      });
-    } catch (err) {
-      setLoading(false)
-      setError(err.message);
+    } catch (error) {
+      setError('An error occurred while submitting the form');
+      console.error('Error:', error);
+      toast.error("Something went wrong")
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div>
       <PageHeader title={'Contact Us'} />
+      <ToastContainer />
       <section className="container mx-auto px-5 lg:px-20 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className="flex flex-col items-center justify-center border-2 border-solid border-gray-100 shadow-ld rounded-lg p-10 text-center gap-4">
@@ -117,65 +116,68 @@ const Page = () => {
           {/* Right Section */}
           <div className="w-full lg:w-1/2 px-4 mt-6 lg:mt-0">
           <form onSubmit={handleSubmit} className="bg-white p-8 shadow rounded-lg">
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            placeholder="First Name"
-            className="border p-3 rounded outline-none focus:border-blue-500"
-          />
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            placeholder="Last Name"
-            className="border p-3 rounded outline-none focus:border-blue-500"
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Phone Number"
-            className="border p-3 rounded outline-none focus:border-blue-500"
-          />
-          <input
-            type="text"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email address"
-            className="border p-3 rounded outline-none focus:border-blue-500"
-          />
-        </div>
+      <div className="grid grid-cols-2 gap-4 mb-4">
         <input
           type="text"
-          name="company"
-          value={formData.company}
+          name="firstName"
+          value={formData.firstName}
           onChange={handleChange}
-          placeholder="Company/Organization Name"
-          className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
+          placeholder="First Name"
+          className="border p-3 rounded outline-none focus:border-blue-500"
         />
-        <textarea
-          name="details"
-          value={formData.details}
+        <input
+          type="text"
+          name="lastName"
+          value={formData.lastName}
           onChange={handleChange}
-          placeholder="Write Details"
-          className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
-          rows="4"
-        ></textarea>
-            {message && <p className="text-primary">{message}</p>}
+          placeholder="Last Name"
+          className="border p-3 rounded outline-none focus:border-blue-500"
+        />
+      </div>
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        <input
+          type="text"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          placeholder="Phone Number"
+          className="border p-3 rounded outline-none focus:border-blue-500"
+        />
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email address"
+          className="border p-3 rounded outline-none focus:border-blue-500"
+        />
+      </div>
+      <input
+        type="text"
+        name="company"
+        value={formData.company}
+        onChange={handleChange}
+        placeholder="Company/Organization Name"
+        className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
+      />
+      <textarea
+        name="details"
+        value={formData.details}
+        onChange={handleChange}
+        placeholder="Write Details"
+        className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
+        rows="4"
+      ></textarea>
+      {message && <p className="text-primary">{message}</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit" className="bg-black text-white p-3 rounded w-full flex items-center gap-2 justify-center">
-          {loading&&(<Loader/>)}
-          SEND MESSAGE
-        </button>
-      </form>
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="bg-black text-white p-3 rounded w-full flex items-center gap-2 justify-center"
+      >
+        {isSubmitting ? 'Submitting...' : 'SEND MESSAGE'}
+      </button>
+    </form>
   
           </div>
 
