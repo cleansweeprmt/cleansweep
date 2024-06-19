@@ -27,6 +27,7 @@ jobs:
           echo WC_CONSUMER_KEY=ck_7aa75663b748232d7216f0d2bb63cb15dddc5b50 >> .env
           echo WC_CONSUMER_SECRET=cs_c5b50698e88217fc8578f60ddabc90fb72177227 >> .env
           echo EMAIL_USER=info@hrfleek.com >> .env
+          echo HUBSPOT_API_KEY="pat-eu1-1946d52b-3476-46b4-a8f5-9b5732a35868" >> .env
           echo EMAIL_PASS=Sat17556 >> .env
           cat .env
 
