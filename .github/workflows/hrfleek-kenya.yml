@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Delete Artifact
+        uses: GeekyEggo/delete-artifact@v5.0.0
+            
       - name: Checkout repository
         uses: actions/checkout@v2
 
