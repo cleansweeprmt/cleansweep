@@ -8,7 +8,7 @@ export async function GET(request) {
 
     try {
         const response = await woocommerce.get('products', {
-            per_page: 40, // Adjust the number of products to fetch
+            per_page: 42, 
             category: category || undefined,
         });
         return NextResponse.json(response.data);
