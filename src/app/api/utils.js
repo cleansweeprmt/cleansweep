@@ -8,7 +8,7 @@ export const hubspotClient = new Client({ accessToken:'pat-eu1-1946d52b-3476-46b
 
 
 export const woocommerce = new WooCommerceRestApi({
-    url: "https://hrfleek.com",
+    url: "https://dashboard.hrfleek.com",
     consumerKey: process.env.WC_CONSUMER_KEY,
     consumerSecret: process.env.WC_CONSUMER_SECRET,
     version: "wc/v3"
