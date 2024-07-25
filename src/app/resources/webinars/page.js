@@ -32,11 +32,11 @@ const Page = () => {
             <div className="pb-4">
 
             </div>
-            <a href="https://lnkd.in/dbPC6d4V?trk=public_post-text"
+            <a href="https://dashboard.hrfleek.com/product/how-to-deal-with-staff-absenteeism-webinar/"
            
            className="uppercase px-10 py-3 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
          >
-          REGISTER NOW 
+          DOWNLOAD RESOURCES
          </a>
          
           </div>
