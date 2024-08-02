@@ -34,6 +34,6 @@ export async function fetchBlogSlugs() {
       const fetchedData={ posts: postsWithImages, totalPages: Number(totalPages) }
       return fetchedData
     } catch (error) {
-      return JSON.stringify({ message: 'Internal Server Error' }, { status: 500 });
+      return JSON.stringify({ message: 'Internal Server Errors' }, { status: 500 });
     }
   }
