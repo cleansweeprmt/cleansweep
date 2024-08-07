@@ -9,7 +9,6 @@ async function fetchCategories() {
   }
   const data = await response.json();
   const findNew=data.filter((d)=>d.name=='hiring')
-  console.log(data,findNew);
   return data;
 }
 
@@ -52,6 +51,8 @@ useEffect(() => {
                 throw new Error(`Error: ${response.statusText}`);
             }
             const data = await response.json();
+           
+            
             setProducts(data);
         } catch (err) {
             setError(err.message);
