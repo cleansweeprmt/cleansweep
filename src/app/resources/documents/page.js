@@ -66,7 +66,7 @@ useEffect(() => {
     }
 }, [activeCategory]);
   const handleGetDocument = async (productId) => {
-    window.location.href = `https://hrfleek.com/product/${productId}`;
+    window.location.href = `https://dashboard.hrfleek.com/product/${productId}`;
 };
 
   if (error) {
