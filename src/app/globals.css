@@ -142,6 +142,26 @@
   color: #13A8BD;
   text-decoration: underline;
 }
+.article p{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6d7a8c;
+  text-transform: none;
+  font-style: normal;
+  margin:0 0 25px;
+}
+.article ul{
+  list-style: disc;
+  list-style-position: inside;
+  color:#6d7a8c ;
+}
+.article ol{
+  list-style: disc;
+  list-style-position: inside;
+  color:#6d7a8c ;
+}
+
 
 /* == Contact == */
 section.contact {

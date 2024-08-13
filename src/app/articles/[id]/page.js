@@ -45,7 +45,7 @@ const Page = () => {
 </div> 
           </div>
         )}
-    <div className=" container mx-auto px-5 lg:px-20 py-10">
+    <div className="container mx-auto px-5 lg:px-20 py-10">
         {/* Main Content */}
         
          
