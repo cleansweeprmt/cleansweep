@@ -2,9 +2,6 @@ User-agent: Googlebot
 Disallow: /nogooglebot/
 
 User-agent: *
-Disallow: /dashboard
-
-User-agent: *
 Allow: /
 
 Sitemap: https://www.evacare.baby/sitemap.xml

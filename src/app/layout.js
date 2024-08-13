@@ -14,6 +14,15 @@ const roboto = Roboto({
 export const metadata = {
   title: "HRFLEEK",
   description: "Your Human resource solutions Partner",
+  openGraph: {
+    title: 'HRFLEEK',
+    description: 'Your Human resource solutions Partner',
+    url: 'https://www.hrfleek.com/',
+    siteName: 'HRFLEEK',
+    images: '/img/hero.jpg',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
