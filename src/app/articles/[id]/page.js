@@ -45,12 +45,12 @@ const Page = () => {
 </div> 
           </div>
         )}
-    <div className="container mx-auto px-5 lg:px-20 py-10">
+    <div className="container mx-auto px-5 lg:px-10 py-10">
         {/* Main Content */}
         
          
-            {!loading&&(<div className="flex flex-col md:flex-row">
-                   <div className="lg:basis-3/4 lg:pr-8">
+            {!loading&&(<div className="flex flex-col md:flex-row gap-4">
+                   <div className="lg:basis-3/4 lg:pr-8  px-3 rounded">
                    {/* Header Section */}
                    <div className="flex flex-col md:flex-row justify-between items-center py-8">
                        <div className="flex-1">
@@ -59,7 +59,7 @@ const Page = () => {
                               </p>
                        </div>
                    </div>
-                   <img src={post?.featured_image_url} alt={post?.title.rendered} width={800} height={400} className="mb-8 rounded-md" />
+                   <img src={post?.featured_image_url} alt={post?.title.rendered}  className="mb-8 rounded-lg h-auto w-full object-cover" />
                    <div dangerouslySetInnerHTML={{ __html: post?.content.rendered }} className='article'>
    
                    </div>
