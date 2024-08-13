@@ -150,6 +150,7 @@
   text-transform: none;
   font-style: normal;
   margin:0 0 25px;
+  text-align: justify;
 }
 .article ul{
   list-style: disc;
