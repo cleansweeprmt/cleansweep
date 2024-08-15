@@ -1,51 +1,23 @@
-'use client'
-import PageHeader from '../../(components)/header';
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-const SinglePostPage = () => {
-      const {id}  = useParams();
-  const [post, setPost] = useState(null);
-  const [posts, setPosts] = useState([]);
-  const [loading,setLoading]=useState(true)
 
-  useEffect(() => {
-    setLoading(true)
-    fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/posts")
-      .then((response) => response.json())
-      .then((posts) => {
-        const promises = posts.map((post) => {
-          return fetch(
-            `https://dashboard.hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
-          )
-            .then((response) => response.json())
-            .then((media) => {
-              post.featured_image_url = media.source_url;
-              return post;
-            });
-        });
-        return Promise.all(promises);
-      })
-      .then((posts) => {
-        console.log(posts);
-        setLoading(false)
-        setPosts(posts);
-        const singlePost =posts.find((post)=>post.slug===id)
-        setPost(singlePost)
-      })
-      .catch((error) => setLoading(false));
-  }, []);
+import PageHeader from '../../(components)/header';
+import { fetchAllPost, fetchPost } from '../../api/fetchPosts';
+
+const SinglePostPage = async({params}) => {
+  
+const  post=await fetchPost(params.id)
+const posts= fetchAllPost()
     return ( 
         <>
             <PageHeader title={''}/>
-        {loading&&(
+        {/* {loading&&(
           <div className='w-full flex items-center justify-center py-10'>
             <div className=" flex justify-center items-center">
   <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
 </div> 
           </div>
-        )}
+        )} */}
     <div className="container mx-auto px-5 lg:px-10 py-10">
-            {!loading&&(<div className="flex flex-col md:flex-row gap-4">
+            {post&&(<div className="flex flex-col md:flex-row gap-4">
                    <div className="lg:basis-3/4 lg:pr-8  px-3 rounded">
                    {/* Header Section */}
                    <div className="flex flex-col md:flex-row justify-between items-center py-8">

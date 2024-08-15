@@ -14,4 +14,10 @@
   
     return post;
   }
+  export async function fetchAllPost() {
+    const res = await fetch(`https://dashboard.hrfleek.com/wp-json/wp/v2/posts`);
+    const posts = await res.json();
+  
+    return posts;
+  }
   
