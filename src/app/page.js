@@ -61,7 +61,7 @@ export default function Home() {
             <p className="text-dim text-lg">We offer bespoke and tailored professional human resource services delivered by our team of highly qualified and experienced professionals to ensure that you receive the support and expertise that you need. It is not just about the services we provide but how we put them together to solve your problems. We focus on offering solutions so that you can focus on your business.<br/><br/>Our focus is to get to the core of our clients HR needs creating and adding value to them by delivering timely, innovative and commercially sound advice and HR solutions. We have set up robust systems to ensure consistently high quality output in every task we undertake and are compromising in our quality control.</p>
           </div>
           <div className="md:basis-1/2 ">
-          <img src="/img/about.png" className="rounded-lg w-full"/>
+          <img src="/img/about.png" className="rounded-lg w-full" alt='About Us'/>
           </div>
           
           
