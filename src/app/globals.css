@@ -128,13 +128,30 @@
 }
 .service-content ul{
   list-style-type: disc;
-  list-style-position: outside;
+  list-style-position: inside;
   margin-bottom: 10px; 
-  margin-left: 40px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6d7a8c;
+  text-transform: none;
+  font-style: normal;
+  margin:0 0 15px;
+  text-align: justify;
+}
+.service-content p{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6d7a8c;
+  text-transform: none;
+  font-style: normal;
+  margin:0 0 15px;
+  text-align: justify;
 }
 .service-content h3{
   color: #005c4d;
-  font-size: 18PX;
+  font-size: 24px;
   font-weight: 600;
   margin: 10px 0;
 }

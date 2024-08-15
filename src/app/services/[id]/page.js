@@ -1,58 +1,20 @@
 
-'use client'
 import Image from 'next/image'
 import PageHeader from '../../(components)/header';
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-const Page = () => {
-     
-    const {id}  = useParams();
-    const [post, setPost] = useState(null);
-    const [posts, setPosts] = useState([]);
-    const [loading,setLoading]=useState(true)
-  
-    useEffect(() => {
-      setLoading(true)
-      fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/catalogue")
-        .then((response) => response.json())
-        .then((posts) => {
-          const promises = posts.map((post) => {
-            return fetch(
-              `https://dashboard.hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
-            )
-              .then((response) => response.json())
-              .then((media) => {
-                post.featured_image_url = media.source_url;
-                return post;
-              });
-          });
-          return Promise.all(promises);
-        })
-        .then((posts) => {
-          setLoading(false)
-          const reversedPosts = posts.reverse();
-          setPosts(reversedPosts);
-          const singlePost =posts.find((post)=>post.slug===id)
-          setPost(singlePost)
-        })
-        .catch((error) => setLoading(false));
-    }, []);
+import {fetchServices,fetchAllServices} from '../../api/fetchService'
+const Page =async ({params}) => {    
+   const post = await fetchServices(params.id)
+   const posts= await fetchAllServices()
+    if (!post) return <div className='w-full flex items-center justify-center py-10'>Post not found.</div>;
     return (   <div>
      <PageHeader title={'Our Services'}/>
-     {loading&&(
-          <div className='w-full flex items-center justify-center py-10'>
-            <div className=" flex justify-center items-center">
-  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
-</div> 
-          </div>
-        )}
-        {!loading&&(<>
+     
             <div className="font-sans mx-auto py-10 px-4 sm:px-6 lg:px-8  container">
             <div className="flex flex-col-reverse lg:flex-row">
                 <div className="bg-white p-4 lg:w-1/4">
 
                     <ul className="bg-teal-700 p-4  text-white rounded-md overflow">
-                        {posts.map((service,index)=>(  <li className="mb-2 py-2" key={index}>
+                        {posts.reverse().map((service,index)=>(  <li className="mb-2 py-2" key={index}>
                             <a href={`/services/${service?.slug}`} className="flex items-center gap-2">
                                 <p dangerouslySetInnerHTML={{ __html: service?.title.rendered }}></p>
                                 <span className="ml-auto min-w-[40px] h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
@@ -66,7 +28,7 @@ const Page = () => {
                 <div className="pt-4 lg:w-3/4">
                     <div>
                         <div className="mb-6 rounded-md overflow-hidden">
-                            <img src={post?.featured_image_url} alt="Placeholder Image" className="mx-auto" />
+                            <img src={post?.featured_image} alt="Placeholder Image" className="mx-auto w-full h-auto rounded-lg" />
                         </div>
                     </div>
                     <h2 className="text-2xl mt-16 font-bold mb-4 text-teal-700" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h2>
@@ -90,7 +52,7 @@ const Page = () => {
                 </a>
             </div>
         </div>
-        </>)}
+      
  
     </div> );
 }
