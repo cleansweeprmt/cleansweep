@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { fetchPost,fetchAllPost} from '../../api/fetchPosts';
 import Head from 'next/head';
 import PageHeader from '../../(components)/header';
+import Link from 'next/link';
 const Page =async ({ params })=> {
     
 
@@ -42,15 +43,19 @@ const Page =async ({ params })=> {
    
                    </div>
                </div>
-                  <div className='lg:basis-1/4'>
+                  <div className='lg:basis-1/4 py-5 rounded-md'>
                 {
                     posts.map((post,index)=>(
-                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-gray-50 shadow-lg p-4'>
-                        <a className='' key={index} href={`/articles/${post.slug}`}>
-                            <h1 className="text-md font-semibold" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
-                        <p className="text-base mb-2 text-dim tex-sm">{new Date(post?.date).toDateString()}
+                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-teal-700 shadow-lg p-4 flex items-center justify-between'>
+                        <Link className='' key={index} href={`/articles/${post.slug}`}>
+                            <h1 className="text-md font-semibold text-white" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
+                        <p className="text-base mb-2 text-gray-100 tex-sm">{new Date(post?.date).toDateString()}
                            </p>
-                            </a></div>
+                            </Link>
+                            <Link href={`/articles/${post.slug}`}>
+                            <span className="ml-auto min-w-[40px] h-[40px] w-[40px] bg-white rounded-full flex justify-center items-center"><img src="/wansom/chevron-right-solid.svg" className="h-[20px] w-[20px]" alt="HrFleek" /></span>
+                            </Link>
+                            </div>
                     ))
                 }
             </div></div>
