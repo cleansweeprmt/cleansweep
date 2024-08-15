@@ -29,7 +29,7 @@ const Page = () => {
       .catch((error) => setLoading(false));
   }, []);
 
-    return (<div>
+    return (<div className="lg:min-h-[500px]">
         <PageHeader title={'Job Vacancies'}/>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
         {loading&&(
