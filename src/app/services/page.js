@@ -1,41 +1,45 @@
-'use client'
-import { useEffect, useState } from "react";
+
 import PageHeader from "../(components)/header";
-import { services } from "../(services)/data";
-const Page = () => {
-  const [posts, setPosts] = useState([]);
-  const [loading,setLoading]=useState(true)
-  useEffect(() => {
-    setLoading(true)
-      fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/catalogue")
-      .then((response) => response.json())
-      .then(async (posts) => {
-        const updatedPosts = await Promise.all(posts.map(async (post) => {
-          const imageResponse = await fetch(
-            `https://dashboard.hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
-          );
-          const image = await imageResponse.json();
-          return {
-            ...post,
-            featured_image_url: image.source_url,
-          };
-        }));
-        const reversedPosts = updatedPosts.reverse();
-        setLoading(false)
-        setPosts(reversedPosts);
-      })
-      .catch((error) => setLoading(false));
-  }, []);
+
+
+async function fetchPosts() {
+  const res = await fetch("https://dashboard.hrfleek.com/wp-json/wp/v2/catalogue");
+  const posts = await res.json();
+
+  // Fetch featured images
+  const updatedPosts = await Promise.all(
+    posts.map(async (post) => {
+      if (post.featured_media) {
+        const imageResponse = await fetch(
+          `https://dashboard.hrfleek.com/wp-json/wp/v2/media/${post.featured_media}`
+        );
+        const image = await imageResponse.json();
+        return {
+          ...post,
+          featured_image_url: image.source_url,
+        };
+      } else {
+        return {
+          ...post,
+          featured_image_url: '', // or a default image URL
+        };
+      }
+    })
+  );
+
+  return updatedPosts.reverse();
+}
+const Page = async() => {
+  const posts = await fetchPosts();
+  if (!posts) return <div className='w-full flex items-center justify-center py-10'>
+  <div className=" flex justify-center items-center">
+<div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
+</div></div>;
+
     return ( <div >
     
     <PageHeader title={'Our Services'}/>
-    {loading&&(
-          <div className='w-full flex items-center justify-center py-10'>
-            <div className=" flex justify-center items-center">
-  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
-</div> 
-          </div>
-        )}
+
     <section className="container mx-auto px-5 lg:px-20 py-10">
         {/* <h1 className="text-2xl text-center text-primary font-semibold">Our Services</h1> */}
         <div className="grid grid-cols-1 lg:grid-cols-3">
@@ -71,5 +75,6 @@ const Page = () => {
 
     </div> );
 }
+
  
 export default Page;

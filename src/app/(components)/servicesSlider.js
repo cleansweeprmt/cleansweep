@@ -2,6 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { services } from "../(services)/data";
+import Link from "next/link";
 
 const ServiceSlider = () => {
   const settings = {
@@ -32,6 +33,7 @@ const ServiceSlider = () => {
       <Slider {...settings}>
         {services.map((card, index) => (
           <div key={card.id} className="p-4">
+            <Link href={`/services/${card.slug}`}>
             <div
               className="bg-white p-6 rounded shadow h-[348px] bg-cover bg-top relative"
               style={{ backgroundImage: `url(${card.img})` }}
@@ -40,7 +42,7 @@ const ServiceSlider = () => {
               <h1 className=" font-extrabold text-white text-2xl absolute bottom-8">
                 {card.title}
               </h1>
-            </div>
+            </div></Link>
           </div>
         ))}
       </Slider>
