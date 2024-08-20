@@ -27,7 +27,7 @@ const Page = () => {
             decreasing productivity, increasing the workload on present
             employees, and lowering overall morale.
             <br />
-            Register for our upcoming Webinar : “How to Deal with Staff
+            Download resources for our past Webinar : “How to Deal with Staff
             Absenteeism”</p>
             <div className="pb-4">
 
