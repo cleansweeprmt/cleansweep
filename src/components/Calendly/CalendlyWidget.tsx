@@ -12,7 +12,7 @@ const CalendlyWidget = () => {
 
   return showWidget ? (
     <InlineWidget 
-      url="https://calendly.com/fotieno-gtwh/30min?back=1&month=2024-05" 
+      url="https://calendly.com/ceo-evacare/30min" 
       styles={{ height: '600px', width: '100%' }} 
     />
   ) : null;
