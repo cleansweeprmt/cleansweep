@@ -66,7 +66,7 @@ const ServiceSlider = () => {
 
                 </div>
                 <div>
-                <a className=" font-extrabold text-white text-2xl cursor-pointer " href={`/services/${card.title}`}>
+                <a className=" font-extrabold text-primary text-2xl cursor-pointer " href={`/services/${card.title}`}>
                 {card.title}
               </a>
                     </div>
