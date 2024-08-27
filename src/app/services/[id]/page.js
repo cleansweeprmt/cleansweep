@@ -28,10 +28,10 @@ const Page =async ({params}) => {
                 <div className="pt-4 lg:w-3/4">
                     <div>
                         <div className="mb-6 rounded-md overflow-hidden">
-                            <img src={post?.featured_image} alt="Placeholder Image" className="mx-auto w-full h-auto rounded-lg" />
+                            <img src='/services/1.jpg' alt="Placeholder Image" className="mx-auto w-full h-auto rounded-lg" />
                         </div>
                     </div>
-                    <h2 className="text-2xl mt-16 font-bold mb-4 text-teal-700" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h2>
+                    <h2 className="text-2xl mt-16 font-bold mb-4 text-primary">Cleaning Services</h2>
                    <div dangerouslySetInnerHTML={{ __html: post?.content.rendered }} className='service-content'>
 
                    </div>
