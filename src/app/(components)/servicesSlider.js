@@ -32,7 +32,7 @@ const ServiceSlider = () => {
       <div className="hidden lg:block">
       <Slider {...settings}>
         {services.map((card, index) => (
-          <div key={card.id} className="p-4 ">
+          <div key={index} className="p-4 ">
             
             <Link href={`/services/${card.slug}`}>
             <div
@@ -87,7 +87,7 @@ const NextArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className=" absolute left-[45%] -bottom-12 z-10 cursor-pointer text-primary"
+      className=" absolute left-[45%] -bottom-12 z-10 cursor-pointer text-secondary"
       onClick={onClick}
     >
       <svg
@@ -112,7 +112,7 @@ const PrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div
-      className="absolute left-[45%] -bottom-12 z-10 ml-10 cursor-pointer text-primary"
+      className="absolute left-[45%] -bottom-12 z-10 ml-10 cursor-pointer text-secondary"
       onClick={onClick}
     >
       <svg
