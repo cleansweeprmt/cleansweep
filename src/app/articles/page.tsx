@@ -53,11 +53,11 @@ export default function Home() {
 
 
           {postsData.posts.map((post,index)=>(  <a className="bg-white shadow-md rounded-lg overflow-hidden" key={index} href={`/articles/${post.slug}`}>
-            {/* <Image src="/wansom/articles.jpg" alt="Job Rotation" width={400} height={200} className="w-full h-48 object-cover"/> */}
+            <img src="/services/1.jpg" alt="blogs" width={400} height={200} className="w-full h-48 object-cover"/>
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-gray-600 text-sm"><i className="far fa-calendar-alt"></i> {new Date(post?.date).toDateString()}</p>
-                <span className="bg-teal-600 text-white text-xs font-semibold px-2 py-1 rounded">HR GUIDES</span>
+                <span className="bg-secondary text-white text-xs font-semibold px-2 py-1 rounded">cleaning guides</span>
               </div>
               <Link href={`/articles/${post.slug}`}>
                 <h3 className="text-xl font-semibold mb-2 hover:text-teal-600 transition cursor-pointer" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h3>
@@ -73,7 +73,7 @@ export default function Home() {
             key={num}
             onClick={() => loadPosts(num)}
             disabled={loading || num === page}
-            className={`py-3 px-5 rounded flex items-center ${num === page ? 'bg-gray-800 text-white' : 'bg-primary text-white'}`}
+            className={`py-3 px-5 rounded flex items-center ${num === page ? 'bg-secondary text-white' : 'bg-primary text-white'}`}
           >
             {loading && num === page && (
               <div className="flex justify-center items-center mr-2">

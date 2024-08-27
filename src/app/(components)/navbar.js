@@ -155,9 +155,7 @@ const Navbar = () => {
           <Link href="/" class={` ${pathname === "/" ? "active" : ""}`}>Home</Link>
           <Link href="/about"  class={` ${pathname === "/about" ? "active" : ""}`}>About Us</Link>
           <Link href="/services" class={` ${pathname === "/services" ? "active" : ""}`}>Services</Link>
-          < Link href="/resources" class={` ${pathname === "/resources" ? "active" : ""}`}>Resources</Link>
-       
-          <Link href="/jobs" class={` ${pathname === "/jobs" ? "active" : ""}`}>Jobs</Link>
+          < Link href="/articles" class={` ${pathname === "/articles" ? "active" : ""}`}>Resources</Link>
 
           <Link href="/contact" class={` ${pathname === "/contact" ? "active" : ""}`}>Contact Us</Link>
 
