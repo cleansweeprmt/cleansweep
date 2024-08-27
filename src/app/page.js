@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import ServiceSlider from './(components)/servicesSlider'
 import Testimonials from './(components)/testimonials'
 import PopupForm from '../components/Form/PopupForm';
+import BlogSection from './(components)/articles'
 
 export default function Home() {
    const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -109,6 +110,26 @@ export default function Home() {
         <section className="container mx-auto px-5 lg:px-20 py-10 gap-10">
           <h2 className='text-center text-primary font-bold text-2xl'>TESTIMONIALS</h2>
           <Testimonials/>
+        </section>
+        <section className="container mx-auto px-5 lg:px-20 py-10" id="about">
+          <div className="flex items-center justify-between">
+            <div>
+            <h1 className="section-title text-secondary">
+          Our Articles
+          </h1>
+          <p className="text-dim text-md"> Offering skilled and affordable home cleaning Services</p>
+            </div>
+            <a
+           href="/services"
+            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
+          >
+            View All Articles
+          </a>
+
+          </div>
+
+       <BlogSection/>
+         
         </section>
       </main>
     </div>
