@@ -22,15 +22,18 @@ export default function Home() {
   return (
     <div className="bg-white">
       <main className="min-h-screen flex-col items-center justify-between bg-white">
-        <section className="py-12  bg-cover hero bg-center lg:bg-top min-h-screen flex flex-col items-start justify-center gap-5 container mx-auto px-5 lg:px-20">
-        <h1 className="hero-title text-primary mb-5 text-start lg:max-w-[50%] lg:mt-28 capitalize">
-                Your Human  Resource solution Partner
+        <section className="py-12  bg-cover hero bg-center lg:bg-top min-h-screen flex flex-col items-start justify-center gap-5 container mx-auto px-5 lg:px-20 relative ">
+          <div className='absolute left-0 top-0 bg-black opacity-20 w-full h-full'>
+
+          </div>
+        <h1 className="hero-title text-white mb-5 text-start lg:max-w-[50%] lg:mt-28 capitalize z-10">
+                Your Home cleaning solutions Partner
               </h1>
               <a
            href="/consultation"
-            className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
+            className="z-10 uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
           >
-            BOOK A CONSULTATION
+            BOOK OUR SERVICES
           </a>
         </section>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }

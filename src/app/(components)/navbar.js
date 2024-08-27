@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div className="container-fluid bg-white fixed w-full z-20">
@@ -49,7 +51,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p> +254741511183</p>
+            <p> +254705122230</p>
           </div>
           <div className="flex items-center gap-1">
             <svg
@@ -67,7 +69,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>info@hrfleek.com</p>
+            <p>info@spruceitup.com</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -150,14 +152,14 @@ const Navbar = () => {
               </svg>
             </span>
           </div>
+          <Link href="/" class={` ${pathname === "/" ? "active" : ""}`}>Home</Link>
+          <Link href="/about"  class={` ${pathname === "/about" ? "active" : ""}`}>About Us</Link>
+          <Link href="/services" class={` ${pathname === "/services" ? "active" : ""}`}>Services</Link>
+          < Link href="/resources" class={` ${pathname === "/resources" ? "active" : ""}`}>Resources</Link>
+       
+          <Link href="/jobs" class={` ${pathname === "/jobs" ? "active" : ""}`}>Jobs</Link>
 
-          <a href="/about">About Us</a>
-          <a href="/services">Services</a>
-          <a href="/resources">Resources</a>
-          <a href="/clients">Clients</a>
-          <a href="/jobs">Jobs</a>
-
-          <a href="/contact">Contact Us</a>
+          <Link href="/contact" class={` ${pathname === "/contact" ? "active" : ""}`}>Contact Us</Link>
 
           <button
             onClick={() => {

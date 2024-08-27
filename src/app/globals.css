@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 .bg-primary {
-  background-color: #0C9494;
+  background-color: #022b60;
 }
 .bg-secondary {
-  background-color: #f1f7f6;
+  background-color: #ff9202;
 }
 .text-primary {
-  color: #0C9494;
+  color: #022b60;
 }
 .text-secondary {
-  color: #64726f;
+  color: #ff9202;
 }
 .text-dark{
- color: #005c4d;
+ color: #022b60;
 }
 .text-dim{
   color: #64726f;
@@ -25,7 +25,7 @@
   margin-bottom: 20px;
 }
 .border-primary{
-  border-color:#0C9494 ;
+  border-color:#ff9202 ;
 }
 
 .hero-title {
@@ -53,7 +53,7 @@
 .links a {
   font-size: 14px;
   font-weight: 500;
-  color: #0C9494;
+  color: #ff9202;
   padding: 13px 10px;
   white-space: nowrap;
 }
@@ -61,7 +61,7 @@
 
 .links a.active,
 .links a:hover {
-  color: #000000;
+  color:#022b60 ;
 }
 
 
