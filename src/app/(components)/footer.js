@@ -5,7 +5,7 @@ const Footer = () => {
     return ( 
         <footer className="bg-primary rounded-top-lg shadow">
     <FloatingWhatsApp   phoneNumber="+254741511183"
-        accountName="HRFLEEK"
+        accountName="SpruceitUp"
         avatar='./logo.png'
         allowEsc
         notification
