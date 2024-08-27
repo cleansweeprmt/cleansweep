@@ -1,7 +1,6 @@
 'use client'
 import "./component.css"
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
-import Logo from '../assets/logo.png'
 const Footer = () => {
     return ( 
         <footer className="bg-primary rounded-top-lg shadow">
