@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from 'react';
-import ClientSlider from './(components)/clientSlider'
 import ServiceSlider from './(components)/servicesSlider'
 import Testimonials from './(components)/testimonials'
 import PopupForm from '../components/Form/PopupForm';
@@ -37,20 +36,20 @@ export default function Home() {
           </a>
         </section>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
-        <ClientSlider/>
+        {/* <ClientSlider/> */}
         <section className="container mx-auto px-5 lg:px-20 py-10" id="about">
           <div className="flex items-center justify-between">
             <div>
-            <h1 className="section-title text-dark">
+            <h1 className="section-title text-secondary">
           Our Services
           </h1>
-          <p className="text-dim text-md"> Offering skilled and affordable Human Resource Services</p>
+          <p className="text-dim text-md"> Offering skilled and affordable home cleaning Services</p>
             </div>
             <a
            href="/services"
-            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border-2 border-primary rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
+            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
           >
-            View All
+            View All Services
           </a>
 
           </div>
