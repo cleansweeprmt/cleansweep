@@ -69,7 +69,7 @@ const PopupForm = ({ isOpen, onClose }) => {
             </button>
             <button
               type="submit"
-              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded flex items-center"
+              className="bg-primary hover:bg-[#ff9202] text-white font-bold py-2 px-4 rounded flex items-center"
             >
               {loading&&(<Loader/>)}
               Subscribe

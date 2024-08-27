@@ -16,7 +16,7 @@ const Page =async ({ params })=> {
 
     return (  <div className="bg-white">
                        <Head>
-        <title>HRFLEEK-{post.title.rendered}</title>
+        <title>SPRUCEITUP-{post.title.rendered}</title>
         <meta name="description" content={post.content.rendered} />
         <meta name="keywords" content={post.title.rendered} />
         <meta property="og:title" content={post.title.rendered} />
@@ -46,7 +46,7 @@ const Page =async ({ params })=> {
                   <div className='lg:basis-1/4 py-5 rounded-md'>
                 {
                     posts.map((post,index)=>(
-                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-teal-700 shadow-lg p-4 flex items-center justify-between'>
+                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-primary shadow-lg p-4 flex items-center justify-between'>
                         <Link className='' key={index} href={`/articles/${post.slug}`}>
                             <h1 className="text-md font-semibold text-white" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
                         <p className="text-base mb-2 text-gray-100 tex-sm">{new Date(post?.date).toDateString()}

@@ -13,7 +13,7 @@ const Page =async ({params}) => {
             <div className="flex flex-col-reverse lg:flex-row">
                 <div className="bg-white p-4 lg:w-1/4">
 
-                    <ul className="bg-teal-700 p-4  text-white rounded-md overflow">
+                    <ul className="bg-primary p-4  text-white rounded-md overflow">
                         {posts.reverse().map((service,index)=>(  <li className="mb-2 py-2" key={index}>
                             <a href={`/services/${service?.slug}`} className="flex items-center gap-2">
                                 <p dangerouslySetInnerHTML={{ __html: service?.title.rendered }}></p>
@@ -38,7 +38,7 @@ const Page =async ({params}) => {
                 </div>
             </div>
         </div>
-        <div className="bg-teal-700">
+        <div className="bg-gray-800">
             {/* Call to Action Section */}
             <div className="mx-auto px-2 sm:px-6 lg:px-8 text-white p-4 py-16 container flex flex-col md:flex-row items-center justify-between rounded mt-8">
                 <div className="flex items-center mb-4 md:mb-0">
@@ -47,7 +47,7 @@ const Page =async ({params}) => {
                     </div>
                     <p className="text-md lg:text-2xl font-bold">Get to know how HRFLEEK can help your business</p>
                 </div>
-                <a href="/consultation" className="bg-white text-teal-700 py-2 px-4 rounded border-2 border-white hover:bg-teal-600 hover:text-white transition">
+                <a href="/consultation" className="bg-white text-secondary py-2 px-4 rounded border-2 border-white hover:bg-teal-600 hover:text-white transition">
                     BOOK A CONSULTATION
                 </a>
             </div>

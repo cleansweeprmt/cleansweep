@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PageHeader from '../(components)/header'
 import { useEffect, useState } from 'react';
 async function fetchPosts(page = 1) {
-  const res = await fetch(`https://dashboard.hrfleek.com/wp-json/wp/v2/posts?per_page=12&page=${page}`);
+  const res = await fetch(`https://spruceitup.intelliverseai.com/wp-json/wp/v2/posts?per_page=12&page=${page}`);
   if (!res.ok) {
     throw new Error('Failed to fetch posts');
   }

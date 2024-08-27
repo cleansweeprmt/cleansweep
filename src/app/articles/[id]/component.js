@@ -9,13 +9,6 @@ const posts= fetchAllPost()
     return ( 
         <>
             <PageHeader title={''}/>
-        {/* {loading&&(
-          <div className='w-full flex items-center justify-center py-10'>
-            <div className=" flex justify-center items-center">
-  <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-black"></div>
-</div> 
-          </div>
-        )} */}
     <div className="container mx-auto px-5 lg:px-10 py-10">
             {post&&(<div className="flex flex-col md:flex-row gap-4">
                    <div className="lg:basis-3/4 lg:pr-8  px-3 rounded">
