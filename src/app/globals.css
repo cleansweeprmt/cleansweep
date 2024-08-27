@@ -460,12 +460,12 @@ form .control-group input::placeholder {
     align-items: center;
     justify-content: flex-start;
     width: 100% !important;
-    color: #005c4d;
+    color: #ff9202;
     padding: 0px 20px 0px;
   }
 
   .links a:hover {
-    background-color: #005c4d;
+    background-color: #ff9202;
     color: white;
   }
 
@@ -485,7 +485,7 @@ form .control-group input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #005c4d;
+    color: #ff9202;
     font-size: 18px;
     position: absolute;
     top: 40px;
