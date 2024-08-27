@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
               <a
            href="/consultation"
-            className="z-10 uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#01382E] focus:outline-none focus:shadow-outline-purple"
+            className="z-10 uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#022b60] focus:outline-none focus:shadow-outline-purple"
           >
             BOOK OUR SERVICES
           </a>
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             <a
            href="/services"
-            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
+            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#022b60] hover:text-white"
           >
             View All Services
           </a>
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
             <a
            href="/services"
-            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#0C9494] hover:text-white"
+            className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#022b60] hover:text-white"
           >
             View All Articles
           </a>
