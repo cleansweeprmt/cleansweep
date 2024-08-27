@@ -184,7 +184,9 @@
   list-style-position: inside;
   color:#6d7a8c ;
 }
-
+.subscribe{
+  background-image: url(../../public/subscribe.png);
+}
 
 /* == Contact == */
 section.contact {
