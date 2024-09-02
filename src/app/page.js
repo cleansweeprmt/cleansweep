@@ -62,7 +62,9 @@ export default function Home() {
         <section className="container mx-auto px-5 lg:px-20 rounded-lg flex flex-col md:flex-row items-start justify-between bg-gray-100 py-10 gap-10">
           <div className="md:basis-1/2 space-y-5">
             <h2 className="text-primary text-2xl font-semibold">About Us</h2>
-            <p className="text-dim text-lg">We offer bespoke and tailored professional home cleaning  services delivered by our team of highly qualified and experienced professionals to ensure that you receive the support and expertise that you need. It is not just about the services we provide but how we put them together to solve your problems. We focus on offering solutions so that you can focus on your business.<br/><br/>Our focus is to get to the core of our clients cleaning needs creating and adding value to them by delivering timely, innovative and commercially sound advice and HR solutions. We have set up robust systems to ensure consistently high quality output in every task we undertake and are compromising in our quality control.</p>
+            <p className="text-dim text-lg">We provide reliable and high-quality house cleaning services in The Hague. As a business located in the heart of the Hague we understand the hassle that comes with house cleaning and therefore we have ensured that we have the best effective and reliable cleaning team. We offer customized cleaning plans tailored to each home’s needs, ensuring a spotless and comfortable environment. Our skilled team uses eco-friendly products to keep your space safe and healthy for everyone. <br/><br/>
+
+We specialize in a range of services, from regular interior cleaning to deep cleaning that tackles hidden dirt and allergens. Our commitment to quality and customer satisfaction sets us apart. Let us help you enjoy a cleaner home without the hassle.</p>
           </div>
           <div className="md:basis-1/2 ">
          <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
