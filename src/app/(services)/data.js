@@ -15,8 +15,8 @@ export const services=[
         slug:'development-of-hr-policies-employment-contracts',
     },
     {
-        title:'Home Sanitization and Disinfection',
-        img:'/services/4.jpg',
+        title:'House Organization',
+        img:'/services/6.jpg',
         slug:'job-analysis',
     },
     {
@@ -25,8 +25,8 @@ export const services=[
         slug:'job-evaluation-grading',
     },
     {
-        title:'Performance Management',
-        img:'/services/6.jpg',
+        title:'Vacuuming',
+        img:'/services/11.jpg',
         slug:'performance-management'
     },
     {
@@ -45,6 +45,7 @@ export const services=[
         img:'/services/9.jpg',
         slug:'immigration'
     }
+
 
 ]
 export const testimonials=[
