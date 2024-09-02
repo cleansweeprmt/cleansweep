@@ -50,43 +50,19 @@ export const services=[
 ]
 export const testimonials=[
     {
-        author:'John Smith, CEO of Tech Innovators Inc',
-        message:'HRfleek transformed our HR processes. They expertly handled recruitment and compliance, letting us focus on growth. Our team is happier and more productive. Highly recommend!'
+        author:'Noreldaim Hussein CJ',
+        message:'Exceptional service! My home has never looked this spotless. The team is thorough, professional, and always on time. Highly recommend!'
     },
     {
-        author:'Sarah Johnson, Operations Manager at Green Solutions',
-        message:'Partnering with HRfleek improved our HR operations dramatically. Their payroll management and employee engagement programs are top-notch. The team is responsive and professional.'
+        author:'Sahar',
+        message:"I was amazed by the attention to detail. They went above and beyond my expectations, making my home feel fresh and inviting. I'll definitely be a regular customer."
     },
     {
-        author:'Michael Brown, Founder of Creative Minds Studio',
-        message:'HRfleek is a game-changer for our small business. They manage compliance and administrative tasks with ease, giving us peace of mind. Their support and expertise are invaluable.'
+        author:'Van den hoogenband',
+        message:"Fantastic cleaning service! They are reliable, friendly, and leave my home sparkling clean every time. I couldn't be happier!"
     }
 ]
 
-export async function getStaticProps() {
-    try {
-      const response = await fetch('https://dashboard.hrfleek.com/wp-json/wp/v2/posts');
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-  
-      const posts = await response.json();
-  
-      return {
-        props: {
-          posts,
-        },
-      };
-    } catch (error) {
-      console.error('Error fetching WordPress posts:', error.message);
-      return {
-        props: {
-          posts: [],
-        },
-      };
-    }
-  }
 
 
 
