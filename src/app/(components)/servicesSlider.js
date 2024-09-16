@@ -34,7 +34,7 @@ const ServiceSlider = () => {
         {services.map((card, index) => (
           <div key={index} className="p-4 ">
             
-            <Link href={`/services/${card.slug}`}>
+            
             <div
               className="bg-white p-6 rounded shadow h-[348px] bg-cover bg-top relative"
               style={{ backgroundImage: `url(${card.img})` }}
@@ -44,7 +44,7 @@ const ServiceSlider = () => {
               <h1 className=" font-extrabold text-primary text-2xl absolute bottom-8 z-10">
                 {card.title}
               </h1>
-            </div></Link>
+            </div>
           </div>
         ))}
       </Slider>
