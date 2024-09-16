@@ -34,7 +34,7 @@ export default function Home() {
            href="/consultation"
             className="z-10 uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#022b60] focus:outline-none focus:shadow-outline-purple"
           >
-            BOOK OUR SERVICES
+            SCHEDULE MY HOME CLEANING SERVICE
           </a>
         </section>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
