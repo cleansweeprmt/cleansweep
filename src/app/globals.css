@@ -85,6 +85,12 @@
   border: 2px solid#00856f;
   background: transparent;
 }
+.description p{
+text-align: center;
+}
+.description ul{
+  list-style: disc;
+}
 
 .marquee-hero {
   position: relative;
