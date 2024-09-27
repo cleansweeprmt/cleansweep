@@ -1,6 +1,5 @@
 // pages/index.js
 'use client'
-import Link from 'next/link'
 import PageHeader from '../(components)/header'
 import { useEffect, useState } from 'react';
 import BlogSection from '../(components)/articles';

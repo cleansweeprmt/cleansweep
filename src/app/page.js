@@ -119,7 +119,7 @@ We specialize in a range of services, from regular interior cleaning to deep cle
           <p className="text-dim text-md"> Offering skilled and affordable home cleaning Services</p>
             </div>
             <a
-           href="/services"
+           href="/articles"
             className="uppercase px-4 py-2 text-xs md:text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border-2 border-none rounded-lg active:bg-primar focus:outline-none focus:shadow-outline-purple hover:bg-[#022b60] hover:text-white"
           >
             View All Articles

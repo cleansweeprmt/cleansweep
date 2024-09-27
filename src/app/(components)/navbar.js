@@ -69,7 +69,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>info@spruceitup.com</p>
+            <p>info@spruceitup.nl</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
