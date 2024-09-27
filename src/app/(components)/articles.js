@@ -2,36 +2,40 @@
 'use client'
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-async function fetchPosts(page = 1) {
-  const res = await fetch(`https://spruceitup.intelliverseai.com/wp-json/wp/v2/posts?per_page=3&page=${page}`);
-  if (!res.ok) {
-    throw new Error('Failed to fetch posts');
-  }
-  const posts = await res.json();
-  const totalPages = res.headers.get('X-WP-TotalPages');
-  return { posts, totalPages: Number(totalPages) };
-}
+import {getBlogPosts} from '../lib/fetchPosts'
 
 
-const BlogSection=()=> {
+const BlogSection=({number})=> {
   const [postsData, setPostsData] = useState({ posts: [], totalPages: 0 });
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
+   // Number of posts per page
 
   const loadPosts = async (page) => {
     setLoading(true);
-    try {
-      const data = await fetchPosts(page);
-      setPostsData(data);
-      setPage(page);
-    } catch (error) {
-      console.error(error);
-    }
-    setLoading(false);
+    setLoading(true)
+    getBlogPosts(page,number).then((data)=>{
+      setLoading(false)
+      setPostsData({ posts: data.posts, totalPages: data.totalPages })
+      setPage(page)
+      console.log(data);
+    }).catch((err)=>{
+      setLoading(false)
+      console.log('something went wrong',err);
+    })
   };
 
   useEffect(() => {
-    loadPosts(page);
+    // loadPosts(page);
+    setLoading(true)
+    getBlogPosts(page,number).then((data)=>{
+      setLoading(false)
+      setPostsData({ posts: data.posts, totalPages: data.totalPages })
+      console.log(data);
+    }).catch((err)=>{
+      setLoading(false)
+      console.log('something went wrong',err);
+    })
   }, []);
 
   return (
@@ -50,7 +54,7 @@ const BlogSection=()=> {
 
 
           {postsData.posts.map((post,index)=>(  <a className="bg-white shadow-md rounded-lg overflow-hidden" key={index} href={`/articles/${post.slug}`}>
-            <img src="/services/1.jpg" alt="cleaning service"  className="w-full h-[300px] object-cover"/>
+            <img src={post?.featured_image_url} alt={post?.title.rendered}  className="w-full h-[300px] object-cover"/>
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-gray-600 text-sm"><i className="far fa-calendar-alt"></i> {new Date(post?.date).toDateString()}</p>

@@ -127,13 +127,13 @@ We specialize in a range of services, from regular interior cleaning to deep cle
 
           </div>
 
-       <BlogSection/>
+       <BlogSection number={3}/>
          
         </section>
         <section className="container-fluid mx-auto px-5 lg:px-20  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
           <div className='space-y-3'>
           <h2 className='text-4xl font-bold'>Book Service Online</h2>
-          <p className='text-dim lg:max-w-[50%]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in which don't look slightly believable.
+          <p className='text-dim lg:max-w-[50%]'>We provide reliable and high-quality house cleaning services in The Hague.
 
 </p>
 
