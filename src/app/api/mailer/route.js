@@ -14,7 +14,12 @@ export async function POST(request) {
     from: 'daisy@intelliverseai.com',
     to: [email,'ochiengwarren10@gmail.com'],
     subject: 'Website Notification',
-    text: ` received new message from ${firstName} ${email} ${phone}: ${details}`,
+    text: `
+    Name: ${firstName}
+    Phone: ${phone}
+    Email: ${email}
+    Details: ${details}
+  `,
   };
 
   try {
