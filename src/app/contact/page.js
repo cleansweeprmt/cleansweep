@@ -121,7 +121,7 @@ const Page = () => {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          placeholder="First Name"
+          placeholder="Your Name"
           className="border p-3 rounded outline-none focus:border-blue-500 w-full mb-4"
         />
         
