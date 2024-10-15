@@ -165,17 +165,17 @@ const Navbar = () => {
             }}
             className="uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-primary border border-transparent rounded-lg active:bg-primary hover:bg-[#ff9202] focus:outline-none focus:shadow-outline-purple"
           >
-            BOOK A CONSULTATION
+            BOOK OUR SERVICES
           </button>
 
-          <button
+          {/* <button
             onClick={() => {
               router.push("https://dashboard.hrfleek.com/wp-content/uploads/2024/06/HRFLEEK-Brochure-new.pdf");
             }}
             className="uppercase px-4 py-2 text-sm font-medium  text-center text-primary transition-colors duration-150 bg-tranparent border-2 border-primary rounded-lg active:bg-primary focus:outline-none focus:shadow-outline-purple hover:bg-[#ff9202] hover:text-white lg:ml-3"
           >
             DOWNLOAD BROCHURE
-          </button>
+          </button> */}
         </div>
         <div className="menu-bar">
           <span
