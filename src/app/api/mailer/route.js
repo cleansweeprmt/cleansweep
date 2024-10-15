@@ -4,7 +4,7 @@ import {transporter} from '../utils'
 
 
 export async function POST(request) {
-  const { email,details,firstName } = await request.json();
+  const { email,details,firstName,phone } = await request.json();
 
   if (!email) {
     return NextResponse.error(new Error('Email is required'));
@@ -14,7 +14,7 @@ export async function POST(request) {
     from: 'daisy@intelliverseai.com',
     to: [email,'ochiengwarren10@gmail.com'],
     subject: 'Website Notification',
-    text: ` received new message from ${firstName} ${email} : ${details}`,
+    text: ` received new message from ${firstName} ${email} ${phone}: ${details}`,
   };
 
   try {
