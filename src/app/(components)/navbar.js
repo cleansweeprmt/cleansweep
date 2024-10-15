@@ -33,7 +33,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>I&M Bank House, 3rd Floor, 2nd Ngong Avenue, Nairobi</p>
+            <p>Dorus Rikerskplein- Hague</p>
           </div>
           <div className="flex items-center gap-1">
             <svg
@@ -51,7 +51,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p> +254705122230</p>
+            <p>+31630665434</p>
           </div>
           <div className="flex items-center gap-1">
             <svg
@@ -72,7 +72,7 @@ const Navbar = () => {
             <p>info@spruceitup.nl</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <a href="https://www.linkedin.com/company/hr-fleek/?viewAsMember=true" target="blank" aria-label="visit our linkedin page">
           <svg className="w-6 h-6" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_17_68)">
@@ -116,7 +116,7 @@ const Navbar = () => {
          
         
         
-        </div>
+        </div> */}
       </div>
       <div className="container mx-auto px-5 lg:px-20 flex items-center justify-between lg:shadow-lg lg:rounded-b-lg lg:bg-white p-3   z-10 lg:w-full">
         <div className="logo">

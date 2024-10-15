@@ -9,22 +9,7 @@ const BlogSection=({number})=> {
   const [postsData, setPostsData] = useState({ posts: [], totalPages: 0 });
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-   // Number of posts per page
-
-  const loadPosts = async (page) => {
-    setLoading(true);
-    setLoading(true)
-    getBlogPosts(page,number).then((data)=>{
-      setLoading(false)
-      setPostsData({ posts: data.posts, totalPages: data.totalPages })
-      setPage(page)
-      console.log(data);
-    }).catch((err)=>{
-      setLoading(false)
-      console.log('something went wrong',err);
-    })
-  };
-
+  
   useEffect(() => {
     // loadPosts(page);
     setLoading(true)

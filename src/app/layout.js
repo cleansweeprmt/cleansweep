@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: 'spruceitup',
     description: 'Your cleaning solutions Partner',
-    url: 'https://www.spruceitup.com/',
+    url: 'https://www.spruceitup.nl/',
     siteName: 'Spruceitup',
     images: '/img/hero.jpg',
     locale: 'en_US',

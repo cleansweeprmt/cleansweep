@@ -3,7 +3,7 @@ import {fetchBlogSlugs} from './lib/fetchPosts'
 
 export default async function sitemap() {
   const slugs = await fetchBlogSlugs();
-  const baseUrl = 'https://spruceitup.com';
+  const baseUrl = 'https://spruceitup.nl';
 
   const staticRoutes = [
     {
@@ -47,26 +47,6 @@ export default async function sitemap() {
       },
     },
     {
-      url: `${baseUrl}/resources`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: `${baseUrl}/resources`,
-          de: `${baseUrl}/resources`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/clients`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: `${baseUrl}/clients`,
-          de: `${baseUrl}/clients`,
-        },
-      },
-    },
-    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       alternates: {
@@ -75,27 +55,7 @@ export default async function sitemap() {
           de: `${baseUrl}/contact`,
         },
       },
-    },
-    {
-      url: `${baseUrl}/jobs`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: `${baseUrl}/jobs`,
-          de: `${baseUrl}/jobs`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/webinars`,
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: `${baseUrl}/webinars`,
-          de: `${baseUrl}/webinars`,
-        },
-      },
-    },
+    }
   ];
 
   const blogRoutes = slugs.map(slug => ({
