@@ -4,23 +4,22 @@ import {transporter} from '../utils'
 
 
 export async function POST(request) {
-  const { email } = await request.json();
-  console.log(email);
+  const { email,details,firstName } = await request.json();
 
   if (!email) {
     return NextResponse.error(new Error('Email is required'));
   }
 
   const mailOptions = {
-    from: 'info@hrfleek.com',
-    to: [email,'info@hrfleek.com'],
-    subject: 'Thank you',
-    text: `Thank you ${email} for subscribing to our newsletter!`,
+    from: 'daisy@intelliverseai.com',
+    to: [email,'ochiengwarren10@gmail.com'],
+    subject: 'Website Notification',
+    text: ` received new message from ${firstName} ${email} : ${details}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    return NextResponse.json({ message: 'Subscription successful' });
+    return NextResponse.json({ message: 'message sent successfully' });
   } catch (error) {
     console.log('heres the error',error);
     return NextResponse.error(new Error(error.message));

@@ -30,7 +30,7 @@ const Page = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/hubspot', {
+      const response = await fetch('/api/mailer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const Page = () => {
       const result = await response.json();
       if (response.ok) {
         setMessage(result.message);
-        toast.success("Thanks for your message")
+        toast.success("We have received your message")
       } else {
         setError(result.message);
       }

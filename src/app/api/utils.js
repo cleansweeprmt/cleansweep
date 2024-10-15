@@ -16,9 +16,9 @@ export const woocommerce = new WooCommerceRestApi({
 
 
 export const transporter = nodemailer.createTransport({
-    host: "smtp.office365.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: "mail.intelliverseai.com",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL_USER, // generated ethereal user
       pass: process.env.EMAIL_PASS, // generated ethereal password

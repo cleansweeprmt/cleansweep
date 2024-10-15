@@ -4,7 +4,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 const Footer = () => {
     return ( 
         <footer className="bg-primary rounded-top-lg shadow">
-    <FloatingWhatsApp   phoneNumber="+254741511183"
+    <FloatingWhatsApp   phoneNumber="+31630665434"
         accountName="SpruceitUp"
         avatar='./logo.png'
         allowEsc
