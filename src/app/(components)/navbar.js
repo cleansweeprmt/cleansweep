@@ -33,7 +33,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>Dorus Rikerskplein- Hague</p>
+            <p>Lethbridge Alberta</p>
           </div>
           <div className="flex items-center gap-1">
             <svg
@@ -69,7 +69,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>info@spruceitup.nl</p>
+            <p>info@cleansweep.com</p>
           </div>
         </div>
         {/* <div className="flex items-center gap-2">

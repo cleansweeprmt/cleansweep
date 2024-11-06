@@ -6,13 +6,13 @@
   background-color: #022b60;
 }
 .bg-secondary {
-  background-color: #ff9202;
+  background-color: #14bbe2;
 }
 .text-primary {
   color: #022b60;
 }
 .text-secondary {
-  color: #ff9202;
+  color: #14bbe2;
 }
 .text-dark{
  color: #022b60;
@@ -25,7 +25,7 @@
   margin-bottom: 20px;
 }
 .border-primary{
-  border-color:#ff9202 ;
+  border-color:#14bbe2 ;
 }
 
 .hero-title {
@@ -53,7 +53,7 @@
 .links a {
   font-size: 14px;
   font-weight: 500;
-  color: #ff9202;
+  color: #14bbe2;
   padding: 13px 10px;
   white-space: nowrap;
 }

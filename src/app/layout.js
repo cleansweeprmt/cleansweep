@@ -11,13 +11,13 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-  title: "spruceitup",
+  title: "cleansweep",
   description: "Your cleaning solutions Partner",
   openGraph: {
-    title: 'spruceitup',
+    title: 'cleansweep',
     description: 'Your cleaning solutions Partner',
-    url: 'https://www.spruceitup.nl/',
-    siteName: 'Spruceitup',
+    url: 'https://www.cleansweep.com/',
+    siteName: 'cleansweep',
     images: '/img/hero.jpg',
     locale: 'en_US',
     type: 'website',
