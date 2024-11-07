@@ -3,7 +3,7 @@ import {fetchBlogSlugs} from './lib/fetchPosts'
 
 export default async function sitemap() {
   const slugs = await fetchBlogSlugs();
-  const baseUrl = 'https://spruceitup.nl';
+  const baseUrl = 'https://cleansweep.com';
 
   const staticRoutes = [
     {

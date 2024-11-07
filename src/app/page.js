@@ -28,7 +28,7 @@ export default function Home() {
 
           </div>
         <h1 className="hero-title text-white mb-5 text-start lg:max-w-[50%] lg:mt-28 capitalize z-10">
-                Your Home cleaning solutions Partner
+                Your Commercial cleaning solutions Partner
               </h1>
               <a
            href="/consultation"

@@ -16,7 +16,7 @@ const Page =async ({ params })=> {
 
     return (  <div className="bg-white">
                        <Head>
-        <title>SPRUCEITUP-{post.title.rendered}</title>
+        <title>cleansweep-{post.title.rendered}</title>
         <meta name="description" content={post.content.rendered} />
         <meta name="keywords" content={post.title.rendered} />
         <meta property="og:title" content={post.title.rendered} />

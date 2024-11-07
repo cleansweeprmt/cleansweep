@@ -5,7 +5,7 @@ const Footer = () => {
     return ( 
         <footer className="bg-primary rounded-top-lg shadow">
     <FloatingWhatsApp   phoneNumber="+31630665434"
-        accountName="SpruceitUp"
+        accountName="cleansweep"
         avatar='./logo.png'
         allowEsc
         notification
@@ -27,7 +27,7 @@ const Footer = () => {
             </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-white text-center">© {new Date().getFullYear()} <a href="#" className="hover:underline">SpruceItUp</a>. All Rights Reserved.</span>
+        <span className="block text-sm text-white text-center">© {new Date().getFullYear()} <a href="#" className="hover:underline">cleansweep</a>. All Rights Reserved.</span>
     </div>
 </footer>
      );
