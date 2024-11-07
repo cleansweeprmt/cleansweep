@@ -28,13 +28,13 @@ export default function Home() {
 
           </div>
         <h1 className="hero-title text-white mb-5 text-start lg:max-w-[50%] lg:mt-28 capitalize z-10">
-                Your Commercial cleaning solutions Partner
+        Eco-Friendly Cleaning Solutions for Your Home and Business
               </h1>
               <a
            href="/consultation"
             className="z-10 uppercase px-4 py-2 text-sm font-medium  text-center text-white transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#022b60] focus:outline-none focus:shadow-outline-purple"
           >
-            SCHEDULE MY HOME CLEANING SERVICE
+            SCHEDULE YOUR CLEANING SERVICE
           </a>
         </section>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
@@ -133,7 +133,7 @@ We specialize in a range of services, from regular interior cleaning to deep cle
         <section className="container-fluid mx-auto px-5 lg:px-20  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
           <div className='space-y-3'>
           <h2 className='text-4xl font-bold'>Book Service Online</h2>
-          <p className='text-dim lg:max-w-[50%]'>We provide reliable and high-quality house cleaning services in The Hague.
+          <p className='text-dim lg:max-w-[50%]'>We provide reliable and high-quality house cleaning services in Alberta.
 
 </p>
 

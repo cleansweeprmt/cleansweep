@@ -6,7 +6,7 @@ const Page = () => {
         <section className="container mx-auto px-5 lg:px-20 py-10 flex flex-col md:flex-row justify-between gap-10">
             <div className="md:basis-1/2 space-y-4">
                 <h2 className="text-2xl text-primary font-semibold ">About Us</h2>
-                <p className="text-dim text-lg">We provide reliable and high-quality house cleaning services in The Hague. As a business located in the heart of the Hague we understand the hassle that comes with house cleaning and therefore we have ensured that we have the best effective and reliable cleaning team. We offer customized cleaning plans tailored to each home’s needs, ensuring a spotless and comfortable environment. Our skilled team uses eco-friendly products to keep your space safe and healthy for everyone. <br/><br/>
+                <p className="text-dim text-lg">We provide reliable and high-quality house cleaning services in Alberta. As a business located in the heart of Alberta we understand the hassle that comes with house cleaning and therefore we have ensured that we have the best effective and reliable cleaning team. We offer customized cleaning plans tailored to each home’s needs, ensuring a spotless and comfortable environment. Our skilled team uses eco-friendly products to keep your space safe and healthy for everyone. <br/><br/>
 
 We specialize in a range of services, from regular interior cleaning to deep cleaning that tackles hidden dirt and allergens. Our commitment to quality and customer satisfaction sets us apart. Let us help you enjoy a cleaner home without the hassle.</p>
 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
@@ -50,6 +50,42 @@ We specialize in a range of services, from regular interior cleaning to deep cle
 <img src="/img/hero.jpg" className="w-full h-full object-cover rounded-lg"/>
             </div>
 
+        </section>
+        <section className="py-10">
+        <p className="text-secondary font-light text-md text-center">
+        Amazing Team
+        </p>
+        <h2 className="font-semibold text-primary text-3xl text-center">Our top dedicated professionals</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 my-10">
+            <div className="relative">
+                <img src="/founder.webp" className="rounded-lg h-[437px] w-full object-cover"/>
+                <div className="bg-white  mx-5 p-5 rounder-lg absolute -bottom-5 left-0 z-10 w-full shadow-lg">
+                <h3 className="font-bold text-lg text-black text-center">John Alllan Lamu</h3>
+                <p className="font-light text-secondary text-center">
+                    Founder-CEO
+                </p>
+                </div>
+            </div>
+            <div className="relative">
+                <img src="/founder.webp" className="rounded-lg h-[437px] w-full object-cover"/>
+                <div className="bg-white  mx-5 p-5 rounder-lg absolute -bottom-5 left-0 z-10 w-full shadow-lg">
+                <h3 className="font-bold text-lg text-black text-center">John Alllan Lamu</h3>
+                <p className="font-light text-secondary text-center">
+                    Founder-CEO
+                </p>
+                </div>
+            </div>
+            <div className="relative">
+                <img src="/founder.webp" className="rounded-lg h-[437px] w-full object-cover"/>
+                <div className="bg-white  mx-5 p-5 rounder-lg absolute -bottom-5 left-0 z-10 w-full shadow-lg">
+                <h3 className="font-bold text-lg text-black text-center">John Alllan Lamu</h3>
+                <p className="font-light text-secondary text-center">
+                    Founder-CEO
+                </p>
+                </div>
+            </div>
+
+        </div>
         </section>
     </div>  );
 }
