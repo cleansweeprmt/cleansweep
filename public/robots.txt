@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://www.evacare.baby/sitemap.xml
+Sitemap: https://www.cleansweep.com/sitemap.xml
