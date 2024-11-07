@@ -45,10 +45,10 @@ const Page =async ({params}) => {
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
                         <Image src="/wansom/calender.png" alt="Calendar Icon" width={24} height={24} />
                     </div>
-                    <p className="text-md lg:text-2xl font-bold">Get to know how HRFLEEK can help your business</p>
+                    <p className="text-md lg:text-2xl font-bold">Get to know how CLEANSWEEP can help your business</p>
                 </div>
                 <a href="/consultation" className="bg-white text-secondary py-2 px-4 rounded border-2 border-white hover:bg-teal-600 hover:text-white transition">
-                    BOOK A CONSULTATION
+                    BOOK A CLEANING CONSULTATION
                 </a>
             </div>
         </div>
