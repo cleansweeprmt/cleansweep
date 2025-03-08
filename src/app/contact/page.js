@@ -109,7 +109,7 @@ const Page = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-gray-600">+31630665434</p>
+                      <p className="text-gray-600">+1(587)894-6112</p>
                     </div>
                   </div>
                 </div>
