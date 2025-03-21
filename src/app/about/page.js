@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHeader from "../(components)/header";
 
 const Page = () => {
@@ -262,22 +263,23 @@ const Page = () => {
             </section>
             
             {/* CTA Section */}
-            <section className="py-16 bg-blue-500 text-white">
-                <div className="container mx-auto px-5 lg:px-20 text-center">
-                    <h2 className="text-3xl font-bold mb-6">Ready for a Cleaner Space?</h2>
-                    <p className="text-xl max-w-3xl mx-auto mb-8">
-                        Experience the CleanSweep difference today. Book your cleaning service and enjoy a spotless, refreshed environment without the hassle.
-                    </p>
-                    <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <button className="bg-white text-blue-500 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
-                            Book Now
-                        </button>
-                        <button className="bg-transparent border-2 border-white hover:bg-blue-400 font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
-                            Contact Us
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <section className="container-fluid mx-auto px-5 lg:px-20  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
+          <div className='space-y-3'>
+          <h2 className='text-4xl font-bold'>Book Service Online</h2>
+          <p className='text-dim lg:max-w-[50%]'>We provide reliable and high-quality house cleaning services in Alberta.
+
+</p>
+
+          </div>
+          <Link href={'/consultation'}
+            className="py-3 px-5 w-[300px] text-white text-center transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#022b60]"
+          >
+            SCHEDULE YOUR HOME CLEANING
+          </Link>
+
+
+
+        </section>
         </div>
     );
 }

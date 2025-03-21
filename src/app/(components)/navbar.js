@@ -9,8 +9,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="container-fluid bg-white fixed w-full z-20">
-      <div className=" container mx-auto lg:px-20 bg-primary text-white text-xs hidden lg:flex items-center px-3 py-2 justify-between z-10">
+    <div className="container-fluid bg-white  w-full">
+      <div className=" bg-primary text-white text-xs hidden lg:flex items-center px-3 py-2 justify-between">
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1">
             <svg

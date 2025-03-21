@@ -3,8 +3,6 @@ import PageHeader from "../(components)/header";
 const Page = () => {
     return (
         <div className="bg-gray-50">
-            <PageHeader title={'Our Services'}/>
-            
             {/* Hero Section */}
             <section className="bg-blue-600 text-white py-16">
                 <div className="container mx-auto px-5 lg:px-20 text-center">
