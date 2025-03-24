@@ -23,7 +23,8 @@ export default function Home() {
   return (
     <div className="bg-white">
       <main className="min-h-screen flex-col items-center justify-between bg-white">
-        <section className="py-12  bg-cover hero bg-center lg:bg-top min-h-screen flex flex-col items-start justify-center gap-5 container mx-auto px-5 lg:px-20 relative ">
+        <section className="py-12  bg-cover hero bg-center lg:bg-top min-h-screen flex flex-col items-start justify-center gap-5 relative ">
+          <div className="container mx-auto px-5 lg:px-20">
           <div className='absolute left-0 top-0 bg-black opacity-20 w-full h-full'>
 
           </div>
@@ -36,6 +37,7 @@ export default function Home() {
           >
             SCHEDULE YOUR CLEANING SERVICE
           </a>
+          </div>
         </section>
         {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
         {/* <ClientSlider/> */}

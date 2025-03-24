@@ -85,7 +85,7 @@ const Footer = () => {
                         </ul>
                         <div className="mt-4">
                             <h4 className="font-semibold mb-2">Emergency Service</h4>
-                            <p className="text-sm">Available 24/7 for urgent cleaning needs</p>
+                            <p className="text-sm">Available 24/7 for your cleaning needs</p>
                         </div>
                     </div>
                 </div>

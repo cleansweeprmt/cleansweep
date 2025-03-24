@@ -1,7 +1,9 @@
-import Link from "next/link";
+"use client";
 import PageHeader from "../(components)/header";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+    const router = useRouter();
     return (
         <div className="bg-gray-50">
             <PageHeader title={'About Us'}/>
@@ -251,7 +253,8 @@ const Page = () => {
             </section>
             
             {/* CTA Section */}
-            <section className="container mx-auto px-5 lg:px-20  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
+            <section className="  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
+                <div className="container mx-auto px-5 lg:px-20">
           <div className='space-y-3'>
           <h2 className='text-4xl font-bold'>Book Service Online</h2>
           <p className='text-dim lg:max-w-[50%]'>We provide reliable and high-quality house cleaning services in Alberta.
@@ -259,15 +262,14 @@ const Page = () => {
 </p>
 
           </div>
-          <Link href={'/contact'}
+          <button onClick={() => router.push('/contact')}
             className="py-3 px-5 w-[300px] text-white text-center transition-colors duration-150 bg-secondary border border-transparent rounded-lg active:bg-primary hover:bg-[#022b60]"
           >
             SCHEDULE YOUR CLEANING
-          </Link>
+          </button>
 
-
-
-        </section>
+                  </div>
+            </section>
         </div>
     );
 }
