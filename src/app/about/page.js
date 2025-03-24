@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PageHeader from "../(components)/header";
-import Image from "next/image";
 
 const Page = () => {
     return (
