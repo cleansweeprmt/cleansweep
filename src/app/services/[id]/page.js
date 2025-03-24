@@ -7,7 +7,7 @@ const Page =async ({params}) => {
    const posts= await fetchAllServices()
     if (!post) return <div className='w-full flex items-center justify-center py-10'>Post not found.</div>;
     return (   <div>
-     <PageHeader title={'Our Services'}/>
+     <PageHeader title={'Our Services'} subTitle={''}/>
      
             <div className="font-sans mx-auto py-10 px-4 sm:px-6 lg:px-8  container">
             <div className="flex flex-col-reverse lg:flex-row">

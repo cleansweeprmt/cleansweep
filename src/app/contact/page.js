@@ -56,7 +56,7 @@ const Page = () => {
 
   return (
     <div>
-      <PageHeader title={'Contact Us'} />
+      <PageHeader title={'Contact Us'} subTitle={''} />
       <ToastContainer />
       <section className="container mx-auto px-5 lg:px-20 py-10">
         <div className="max-w-6xl mx-auto">

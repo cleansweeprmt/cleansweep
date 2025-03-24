@@ -27,7 +27,7 @@ const Page =async ({ params })=> {
         <meta name="twitter:description" content={post.content.rendered} />
         <meta name="twitter:image" content={post.featured_image}/>
       </Head>
-      <PageHeader title={''}/>
+      <PageHeader title={''} subTitle={''}/>
       <div className="flex flex-col md:flex-row gap-4 px-5 lg:px-10">
                    <div className="lg:basis-3/4 lg:pr-8  px-3 rounded">
                    {/* Header Section */}

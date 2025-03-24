@@ -252,7 +252,6 @@ const Page = () => {
             </section>
             
             {/* Specialized Cleaning Section */}
-      {/* Specialized Cleaning Section */}
 <section className="py-16 bg-white">
     <div className="container mx-auto px-5 lg:px-20">
         <div className="flex flex-col md:flex-row items-start gap-8">

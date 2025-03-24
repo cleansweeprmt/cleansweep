@@ -6,7 +6,7 @@ const Page = () => {
     const router = useRouter();
     return (
         <div className="bg-gray-50">
-            <PageHeader title={'About Us'}/>
+            <PageHeader title={'About Us'} subTitle={''}/>
             
             {/* Hero Section */}
             <section className="container mx-auto px-5 lg:px-20 py-16">

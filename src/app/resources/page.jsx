@@ -13,7 +13,7 @@ const Page = () => {
   };
   return (
     <div className="">
-      <PageHeader title={"LEGAL INFORMATION AND RESOURCES"} />
+      <PageHeader title={"LEGAL INFORMATION AND RESOURCES"} subTitle={''}/>
       {isPopupOpen && (<PopupForm isOpen={isPopupOpen} onClose={handleClosePopup}/>) }
       <section className="container mx-auto px-5 lg:px-20 bg-white py-10 grid grid-cols-1 lg:grid-cols-4 mb-10 gap-10">
         <a href="/articles" className="shadow-xl h-[250px] flex flex-col items-center justify-center z-10 rounded-lg gap-4 bg-gray-100">

@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div>
-      <PageHeader title={'View Our Articles'}/>
+      <PageHeader title={'View Our Articles'} subTitle={''}/>
     
       {/* Resource Section */}
       <BlogSection number={9}/>
