@@ -58,18 +58,8 @@ export default async function sitemap() {
     }
   ];
 
-  const blogRoutes = slugs.map(slug => ({
-    url: `${baseUrl}/articles/${slug}`,
-    lastModified: new Date(),
-    alternates: {
-      languages: {
-        es: `${baseUrl}/es/articles/${slug}`,
-        de: `${baseUrl}/de/articles/${slug}`,
-      },
-    },
-  }));
 
-  const routes = [...staticRoutes, ...blogRoutes];
+  const routes = [...staticRoutes];
 
   return routes;
 }
