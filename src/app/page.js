@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import ServiceSlider from './(components)/servicesSlider'
 import Testimonials from './(components)/testimonials'
 import PopupForm from '../components/Form/PopupForm';
-import BlogSection from './(components)/articles'
 import Link from 'next/link';
 
 export default function Home() {
