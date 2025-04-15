@@ -112,7 +112,7 @@ We specialize in a range of services, from regular interior cleaning to deep cle
           <h2 className='text-center text-primary font-bold text-2xl'>TESTIMONIALS</h2>
           <Testimonials/>
         </section>
-        <section className="container mx-auto px-5 lg:px-20 py-10 " id="about">
+        {/* <section className="container mx-auto px-5 lg:px-20 py-10 " id="about">
           <div className="flex items-center justify-between">
             <div>
             <h1 className="section-title text-secondary">
@@ -128,10 +128,10 @@ We specialize in a range of services, from regular interior cleaning to deep cle
           </a>
 
           </div>
-
+ 
        <BlogSection number={3}/>
          
-        </section>
+        </section> */}
         <section className="container-fluid mx-auto px-5 lg:px-20  gap-10 subscribe bg-cover bg-center min-h-screen -mb-40 flex flex-col justify-center ">
           <div className='space-y-3'>
           <h2 className='text-4xl font-bold'>Book Service Online</h2>

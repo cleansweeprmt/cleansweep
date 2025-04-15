@@ -40,7 +40,7 @@ export default function Home() {
       <PageHeader title={'View Our Articles'} subTitle={''}/>
     
       {/* Resource Section */}
-      <BlogSection number={9}/>
+      {/* <BlogSection number={9}/> */}
       
 
       {/* Other components or content can be here */}
