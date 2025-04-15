@@ -1,9 +1,7 @@
 // app/sitemap.js
-import {fetchBlogSlugs} from './lib/fetchPosts'
 
 export default async function sitemap() {
-  const slugs = await fetchBlogSlugs();
-  const baseUrl = 'https://cleansweep.com';
+  const baseUrl = 'https://clean-sweep.net/';
 
   const staticRoutes = [
     {
