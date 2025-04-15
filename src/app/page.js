@@ -10,9 +10,6 @@ export default function Home() {
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
-  const handleBeforeUnload = () => {
-    setIsPopupOpen(true);
-  };
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       // handleBeforeUnload();

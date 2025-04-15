@@ -26,16 +26,19 @@ const posts= fetchAllPost()
                    </div>
                </div>
                   <div className='lg:basis-1/4'>
-                {
-                    posts.map((post,index)=>(
-                        <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-gray-50 shadow-lg p-4'>
-                        <a className='' key={index} href={`/articles/${post.slug}`}>
-                            <h1 className="text-md font-semibold" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
-                        <p className="text-base mb-2 text-dim tex-sm">{new Date(post?.date).toDateString()}
-                           </p>
-                            </a></div>
-                    ))
-                }
+                  {posts&&(
+                    <>{
+                        posts.map((post,index)=>(
+                            <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-gray-50 shadow-lg p-4'>
+                            <a className='' key={index} href={`/articles/${post.slug}`}>
+                                <h1 className="text-md font-semibold" dangerouslySetInnerHTML={{ __html: post?.title.rendered }}></h1>
+                            <p className="text-base mb-2 text-dim tex-sm">{new Date(post?.date).toDateString()}
+                               </p>
+                                </a></div>
+                        ))
+                    }
+                    </>)}
+                
             </div></div>)}
         
     </div>

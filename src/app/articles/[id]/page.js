@@ -44,7 +44,9 @@ const Page =async ({ params })=> {
                    </div>
                </div>
                   <div className='lg:basis-1/4 py-5 rounded-md'>
-                {
+                  {posts&&(
+                    <>
+                         {
                     posts.map((post,index)=>(
                         <div className='border-b-solid border-b-2 border-gray-100 py-4 bg-primary shadow-lg p-4 flex items-center justify-between'>
                         <Link className='' key={index} href={`/articles/${post.slug}`}>
@@ -58,6 +60,9 @@ const Page =async ({ params })=> {
                             </div>
                     ))
                 }
+                    </>
+                   )}
+           
             </div></div>
     
 </div>  );

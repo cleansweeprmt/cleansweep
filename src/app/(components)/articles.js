@@ -37,8 +37,9 @@ const BlogSection=({number})=> {
         )}
         <div className="grid gap-8 py-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
+{postsData.lengt>0&&(<>
 
-          {postsData.posts.map((post,index)=>(  <a className="bg-white shadow-md rounded-lg overflow-hidden" key={index} href={`/articles/${post.slug}`}>
+  {postsData.posts.map((post,index)=>(  <a className="bg-white shadow-md rounded-lg overflow-hidden" key={index} href={`/articles/${post.slug}`}>
             <img src={post?.featured_image_url} alt={post?.title.rendered}  className="w-full h-[300px] object-cover"/>
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
@@ -52,6 +53,13 @@ const BlogSection=({number})=> {
              
             </div>
           </a>))}
+</>
+
+    )} 
+    {postsData.posts.length===0&&(
+  <div className='w-full flex items-center justify-center py-10'>
+    <h1 className='text-2xl font-bold text-center'>No Articles Found</h1>
+    </div>)}
         </div>
       </div>
 
