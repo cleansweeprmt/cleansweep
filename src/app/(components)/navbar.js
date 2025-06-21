@@ -33,7 +33,7 @@ const Navbar = () => {
               />
             </svg>
 
-            <p>Lethbridge Alberta</p>
+            <p>Lethbridge RPO Higlands</p>
           </div>
           <div className="flex items-center gap-2">
             <svg

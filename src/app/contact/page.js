@@ -95,7 +95,7 @@ const Page = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-gray-600">Lethbridge Alberta</p>
+                      <p className="text-gray-600">Lethbridge RPO Higlands, an T1J 4Y2,<br />PO Box 29003</p>
                     </div>
                   </div>
                 </div>

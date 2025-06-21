@@ -58,7 +58,7 @@ const Footer = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                                 </svg>
-                                <span>Lethbridge, Alberta</span>
+                                <span>PO Box 29003 Lethbridge RPO Higlands, an T1J 4Y2</span>
                             </li>
                             <li className="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -79,9 +79,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
                         <ul className="space-y-2">
-                            <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
-                            <li>Saturday: 9:00 AM - 4:00 PM</li>
-                            <li>Sunday: Closed</li>
+                            <li>Monday to Sunday 9-5 pm</li>
                         </ul>
                         <div className="mt-4">
                             <h4 className="font-semibold mb-2">Emergency Service</h4>
